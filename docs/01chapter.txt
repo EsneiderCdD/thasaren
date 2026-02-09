@@ -1,0 +1,5 @@
+npm create vite@latest
+(thsaren --template react --javascript --yes
+cd thasaren
+npm install
+npm run dev)
