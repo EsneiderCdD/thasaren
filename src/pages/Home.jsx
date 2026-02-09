@@ -1,11 +1,13 @@
 import './styles/Home.css';
+import Navbar from '../components/features/navbar/Navbar.jsx'
 
 function Home() {
     return (
         <div className='container'>
-            <h1 className="hola">Hola Mundo!</h1>
-            <h2>Bienvenido a Thasaren</h2>
-            <p>Pagina web de notas</p>
+            <h1 className="hola">React Notes + JavaScript</h1>
+            <h2>Pagina web de notas</h2>
+            <p>By Esneider Cadavid</p>
+            <Navbar></Navbar>
         </div>
     );
 }
