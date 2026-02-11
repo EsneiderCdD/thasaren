@@ -1,5 +1,5 @@
 import { useRoutes } from 'react-router-dom';
-import Layout from '../components/Layout/Layout';
+import Layout from '../components/reusables/Layout/Layout';
 import Home from '../pages/Home';
 import Estructura from '../pages/Estructura';
 import Tabla from '../pages/Tabla';
