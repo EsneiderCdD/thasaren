@@ -1,17 +1,23 @@
-import {Routes, Route} from 'react-router-dom';
-import Home from '../pages/Home.jsx';
-import Init from '../pages/Init.jsx'
-import ReactRouterDom from '../pages/ReactRouterDom.jsx';
+import { useRoutes } from 'react-router-dom';
+import Layout from '../components/Layout/Layout';
+import Home from '../pages/Home';
+import Estructura from '../pages/Estructura';
+import Tabla from '../pages/Tabla';
 
-function AppRoutes() {
-    return (
-        <Routes>
+const AppRoutes = () => {
+    const element = useRoutes([
+        {
+            path: '/',
+            element: <Layout />,
+            children: [
+                { index: true, element: <Home /> },
+                { path: 'estructura', element: <Estructura /> },
+                { path: 'tabla', element: <Tabla /> },
+            ],
+        },
+    ]);
 
-            <Route path='/' element={<Home/>}/>
-            <Route path='init' element={<Init/>}/>
-            <Route path='reactrouterdom' element={<ReactRouterDom/>}/>
+    return element;
+};
 
-        </Routes>
-    );
-}
 export default AppRoutes;
