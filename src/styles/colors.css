@@ -1,0 +1,18 @@
+:root {
+    /* Grayscale - Basic Scale 0-100 */
+    --gray-0: #ffffff;
+    --gray-5: #f9f9f9;
+    --gray-10: #f4f4f4;
+    --gray-20: #eeeeee;
+    --gray-40: #999999;
+    --gray-70: #444444;
+    --gray-80: #333333;
+    --gray-90: #121212;
+    --gray-100: #000000;
+
+    /* Semantic aliases using the gray scale */
+    --bg-body: var(--gray-0);
+    --text-main: var(--gray-90);
+    --border-light: var(--gray-20);
+    --border-dark: var(--gray-80);
+}

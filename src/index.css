@@ -1,49 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+@import './styles/colors.css';
+@import './styles/typography.css';
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* Linea Guia */
-  border: 1px solid red;
-  
-
-
+  /* border: 1px solid red; */
 }
 
-#root {
-
-  /* VARIABLES */
-  --bg-primary: #ffffff;
-  --text-primary: #121212;
-  --accent: #333333;
-  --border: #eeeeee;
-
-  /* max-width: 1280px;
-  background-color: gray;
-  margin: 0 auto; */
- 
-  /* --font-body: 'Inter', system-ui, sans-serif;
-  --font-heading: 'Poppins', system-ui, sans-serif;
-
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-
-  --font-weight-regular: 300;
-  --font-weight-medium: 400;
-  --font-weight-semibold: 500;
-  --font-weight-bold: 600;
-
-  --font-title: 600 3rem 'Poppins', sans-serif;
-  --font-subtitle: 500 1.5rem 'Inter', sans-serif;
-  --font-base: 400 1.13rem 'Inter', sans-serif;
-  --font-heading: 600 1.5rem 'Poppins', sans-serif; */
-
+:root {
+  /* VARIABLES SEMÁNTICAS GLOBALES */
+  --bg-primary: var(--gray-70);
+  --text-primary: var(--gray-10);
+  --accent: var(--gray-80);
+  --border: var(--gray-20);
 }
 
 body {
@@ -53,8 +24,6 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-
-
 
 a {
   text-decoration: none;
@@ -77,4 +46,3 @@ ul {
   align-items: center;
   justify-content: center;
 }
-
