@@ -6,7 +6,13 @@ function NavbarGrid() {
     return (
         <nav>
             <Link to="/initialize">
-                <Square />
+                <Square title="Initialize" type="square" />
+            </Link>
+            <Link to="/rrd">
+                <Square title="React Router DOM" type="rectangle" />
+            </Link>
+            <Link to="/basiccss" >
+                <Square title="Basic CSS" type="square" />
             </Link>
         </nav>
     )

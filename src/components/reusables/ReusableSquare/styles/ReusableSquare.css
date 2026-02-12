@@ -7,3 +7,7 @@
     background-color: var(--gray-40);
     border-radius: 1.5rem;
 }
+
+.square.rectangle {
+    width: 250px;
+}

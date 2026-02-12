@@ -4,6 +4,8 @@ import Home from '../pages/Home';
 import Estructura from '../pages/Estructura';
 import Tabla from '../pages/Tabla';
 import Init from '../components/features/Init/Init';
+import RRD from '../components/features/ReactRouterDOM/ReactRouterDOM';
+import BasicCSS from '../components/features/CSS/BasicCSS/BasicCSS';
 
 const AppRoutes = () => {
     const element = useRoutes([
@@ -15,6 +17,8 @@ const AppRoutes = () => {
                 { path: 'estructura', element: <Estructura /> },
                 { path: 'tabla', element: <Tabla /> },
                 { path: 'initialize', element: <Init /> },
+                { path: 'rrd', element: <RRD /> },
+                { path: 'basiccss', element: <BasicCSS /> },
             ],
         },
     ]);
