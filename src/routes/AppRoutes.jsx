@@ -3,6 +3,7 @@ import Layout from '../components/reusables/Layout/Layout';
 import Home from '../pages/Home';
 import Estructura from '../pages/Estructura';
 import Tabla from '../pages/Tabla';
+import Init from '../components/features/Init/Init';
 
 const AppRoutes = () => {
     const element = useRoutes([
@@ -13,6 +14,7 @@ const AppRoutes = () => {
                 { index: true, element: <Home /> },
                 { path: 'estructura', element: <Estructura /> },
                 { path: 'tabla', element: <Tabla /> },
+                { path: 'initialize', element: <Init /> },
             ],
         },
     ]);

@@ -1,4 +1,5 @@
 import './styles/Home.css';
+import NavbarGrid from '../../reusables/NavigationGrid/NavigationGrid';
 
 const HomeFeature = () => {
     return (
@@ -9,6 +10,7 @@ const HomeFeature = () => {
                     Recopilacion de conocimientos, herramientas y librerias para el desarrollo de aplicaciones web.
                 </p>
             </section>
+            <NavbarGrid />
         </div>
     );
 };
