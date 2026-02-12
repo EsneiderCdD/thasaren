@@ -7,6 +7,9 @@ import Init from '../components/features/Init/Init';
 import RRD from '../components/features/ReactRouterDOM/ReactRouterDOM';
 import BasicCSS from '../components/features/CSS/BasicCSS/BasicCSS';
 import HelloWorld from '../components/features/HelloWorld/HelloWorld';
+import Pruebas from '../pages/Pruebas';
+import ViewCode from '../components/reusables/ViewCode/ViewCode';
+import { ejemploBasico } from '../components/reusables/ViewCode/styles/code/data';
 
 const AppRoutes = () => {
     const element = useRoutes([
@@ -21,6 +24,8 @@ const AppRoutes = () => {
                 { path: 'rrd', element: <RRD /> },
                 { path: 'basiccss', element: <BasicCSS /> },
                 { path: 'helloworld', element: <HelloWorld /> },
+                { path: 'pruebas', element: <Pruebas /> },
+                { path: 'idecss', element: <ViewCode code={ejemploBasico} /> }
             ],
         },
     ]);

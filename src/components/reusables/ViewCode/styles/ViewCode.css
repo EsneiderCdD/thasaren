@@ -1,0 +1,59 @@
+/* 
+.HelloWorld-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.05em;
+}
+
+.HelloWorld-text {
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: var(--gray-10);
+} */
+
+
+.code-editor-container {
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+
+    display: flex;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: monospace;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.line-number {
+    padding: 0.5rem;
+    text-align: right;
+    border-right: 1px solid #333;
+    color: #858585;
+    user-select: none;
+}
+
+.code-content {
+    flex-grow: 1;
+    padding: 0.5rem;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.token.keyword {
+    color: #569cd6;
+}
+
+.token.string {
+    color: #ce9178;
+}
+
+.token.boolean {
+    color: #569cd6;
+}
+
+.token.number {
+    color: #b5cea8;
+}

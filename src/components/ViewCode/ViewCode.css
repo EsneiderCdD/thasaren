@@ -1,0 +1,124 @@
+/* ViewCode.css */
+.code-editor-container {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+
+    /* MODIFICACIÓN: Ancho consistente con el sistema de contenedores del proyecto */
+    width: 100%;
+    margin: 2rem 0;
+    /* Margen vertical solamente, el horizontal lo controla el padre */
+
+    /* LA RETÍCULA (Fase 2) */
+    display: flex;
+    /* Flexbox para separar números de línea del contenido */
+    overflow: hidden;
+    /* El scroll lo manejará el contenido interno */
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Columna de números de línea */
+.line-numbers {
+    background-color: #1e1e1e;
+    color: #858585;
+    /* Gris tenue para no distraer */
+    text-align: right;
+    padding: 1.5rem 1rem;
+    border-right: 1px solid #333;
+    /* Separador sutil */
+    user-select: none;
+    /* No seleccionable al copiar el código */
+    min-width: 3rem;
+    /* Ancho fijo mínimo */
+}
+
+/* Área de contenido del código */
+.code-content {
+    padding: 1.5rem;
+    overflow-x: auto;
+    /* Scroll horizontal aquí */
+    white-space: pre;
+    /* CRÍTICO: Mantiene espacios e indentación */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Ocupa el resto del espacio */
+}
+
+/* Tokens de Sintaxis (Extendidos) */
+.token.keyword {
+    color: #569cd6;
+}
+
+/* azul */
+.token.control {
+    color: #c586c0;
+}
+
+/* violeta (if, return, import) */
+.token.string {
+    color: #ce9178;
+}
+
+/* naranja suave */
+.token.number {
+    color: #b5cea8;
+}
+
+/* verde claro */
+.token.boolean {
+    color: #569cd6;
+}
+
+/* azul */
+.token.function {
+    color: #dcdcaa;
+}
+
+/* amarillo crema */
+.token.param {
+    color: #9cdcfe;
+}
+
+/* azul claro */
+.token.property {
+    color: #9cdcfe;
+}
+
+/* azul claro */
+.token.class {
+    color: #4ec9b0;
+}
+
+/* verde agua */
+.token.punctuation {
+    color: #ffd700;
+}
+
+/* amarillo brillante */
+.token.operator {
+    color: #d4d4d4;
+}
+
+/* blanco grisáceo */
+.token.comment {
+    color: #6a9955;
+    font-style: italic;
+}
+
+/* verde oscuro */
+/* Tokens específicos de CSS */
+.token.selector {
+    color: #d7ba7d;
+}
+
+/* beige */
+.token.unit {
+    color: #b5cea8;
+}
+
+/* verde claro */
