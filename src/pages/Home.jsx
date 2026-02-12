@@ -1,15 +1,9 @@
-import './styles/Home.css';
-import Navbar from '../components/features/navbar/Navbar.jsx'
+import HomeFeature from '../components/features/Home/Home';
 
-function Home() {
+const Home = () => {
     return (
-        <div className='container'>
-            <h1 className="hola">React Notes + JavaScript</h1>
-            <h2>Pagina web de notas</h2>
-            <p>By Esneider Cadavid</p>
-            <Navbar></Navbar>
-        </div>
+        <HomeFeature />
     );
-}
+};
 
 export default Home;

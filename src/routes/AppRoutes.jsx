@@ -1,13 +1,29 @@
-import {Routes, Route} from 'react-router-dom';
-import Home from '../pages/Home.jsx';
-import HelloWorld from '../pages/HelloWorld.jsx';
+import { useRoutes } from 'react-router-dom';
+import Layout from '../components/reusables/Layout/Layout';
+import Home from '../pages/Home';
+import Estructura from '../pages/Estructura';
+import Tabla from '../pages/Tabla';
+import Init from '../components/features/Init/Init';
+import RRD from '../components/features/ReactRouterDOM/ReactRouterDOM';
+import BasicCSS from '../components/features/CSS/BasicCSS/BasicCSS';
 
-function AppRoutes() {
-    return (
-        <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/helloworld' element={<HelloWorld/>}/>
-        </Routes>
-    );
-}
+const AppRoutes = () => {
+    const element = useRoutes([
+        {
+            path: '/',
+            element: <Layout />,
+            children: [
+                { index: true, element: <Home /> },
+                { path: 'estructura', element: <Estructura /> },
+                { path: 'tabla', element: <Tabla /> },
+                { path: 'initialize', element: <Init /> },
+                { path: 'rrd', element: <RRD /> },
+                { path: 'basiccss', element: <BasicCSS /> },
+            ],
+        },
+    ]);
+
+    return element;
+};
+
 export default AppRoutes;

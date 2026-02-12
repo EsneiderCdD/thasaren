@@ -1,8 +1,0 @@
-react router dom
-npm install react-router-dom
-
-envolver la aplicacion en un BrowserRouter
-definir rutas con Routes y Route
-crear componentes para cada ruta
-importar componentes en AppRoutes
-(crear enlaces con Link)
