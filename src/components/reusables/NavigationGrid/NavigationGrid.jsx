@@ -14,6 +14,9 @@ function NavbarGrid() {
             <Link to="/basiccss" >
                 <Square title="Basic CSS" type="square" />
             </Link>
+            <Link to="/helloworld" >
+                <Square title="Hello World" type="rectangle" />
+            </Link>
         </nav>
     )
 }
