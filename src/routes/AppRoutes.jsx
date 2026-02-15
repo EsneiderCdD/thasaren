@@ -9,6 +9,13 @@ import Origin from '../pages/Origin';
 import Entity from '../pages/Entity';
 import List from '../pages/List';
 import Logic from '../pages/Logic';
+import Cycle from '../pages/Cycle';
+import Action from '../pages/Action';
+import Dom from '../pages/Dom';
+import Async from '../pages/Async';
+import Api from '../pages/Api';
+import ClassPage from '../pages/Class';
+import Memory from '../pages/Memory';
 
 const AppRoutes = () => {
     const element = useRoutes([
@@ -25,6 +32,13 @@ const AppRoutes = () => {
                 { path: 'entity', element: <Entity /> },
                 { path: 'list', element: <List /> },
                 { path: 'logic', element: <Logic /> },
+                { path: 'cycle', element: <Cycle /> },
+                { path: 'action', element: <Action /> },
+                { path: 'dom', element: <Dom /> },
+                { path: 'async', element: <Async /> },
+                { path: 'api', element: <Api /> },
+                { path: 'class', element: <ClassPage /> },
+                { path: 'memory', element: <Memory /> },
             ],
         },
     ]);
