@@ -10,11 +10,7 @@ if (saldo >= 500) {
     console.log("Sin fondos");
 }`;
 
-export const ejemploTernario = `const edad = 20;
-// Sintaxis: Condición ? ValorTrue : ValorFalse
-const tipo = edad >= 18 ? "Adulto" : "Menor";
 
-console.log(tipo); // "Adulto"`;
 
 export const ejemploSwitch = `const rol = "admin";
 
@@ -29,22 +25,27 @@ switch (rol) {
         console.log("Lectura");
 }`;
 
-export const ejemploShortCircuit = `const usuario = { nombre: "Ana" };
 
-// AND (&&): Ejecuta si existe
-usuario && console.log("Hola " + usuario.nombre);
 
-// OR (||): Valor por defecto
-const puerto = null || 3000;
-console.log(puerto); // 3000`;
+export const ejemploGuardClauseProblema = `// FORMA TRADICIONAL (A evitar)
+function procesar(usuario) {
+  if (usuario) {                 
+    if (usuario.activo) {        
+      if (usuario.saldo > 0) {   
+        // ... Lógica real aquí ...
+        console.log("Procesando...");
+      }
+    }
+  }
+}`;
 
-export const ejemploGuardClause = `function procesar(usuario) {
-    // Early Return: Validar lo malo primero
-    if (!usuario) return;
-    if (!usuario.activo) return;
+export const ejemploGuardClauseSolucion = `// FORMA CLEAN (Guard Clause)
+function procesar(usuario) {
+  // 1. Validar lo malo primero
+  if (!usuario) return;
+  if (!usuario.activo) return; 
+  if (usuario.saldo <= 0) return; 
 
-    // Camino feliz
-    console.log("Procesando...");
-}
-
-procesar({ activo: true }); // "Procesando..."`;
+  // 2. Camino Feliz (Happy Path)
+  console.log("Procesando...");
+}`;

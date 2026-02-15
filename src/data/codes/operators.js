@@ -1,11 +1,11 @@
-// === OPERADORES ===
+export const ejemploAsignacion = `let x;
+x = "casa";
+console.log(x); //casa`;
 
-export const ejemploAsignacion = `let x = 10;
-x += 5; 
-console.log(x); // 15
-
-x -= 2; 
-console.log(x); // 13`;
+export const ejemploAsignacionCompuesta = `let n = 10;
+n += 5; // n = n + 5 (15)
+n -= 2; // n = n - 2 (13)
+console.log(n); // 13`;
 
 export const ejemploAritmetica = `console.log(10 + 5); // 15
 console.log(10 - 2); // 8
@@ -22,19 +22,14 @@ console.log(n); // 6
 n--; 
 console.log(n); // 5`;
 
-// Nota: ejemploExponenciacion estaba en el plan pero no lo migré en el paso anterior, lo añado ahora aquí.
 export const ejemploExponenciacion = `console.log(2 ** 3); // 8 (2*2*2)`;
 
-export const ejemploComparacion = `// Relacionales
-console.log(10 > 5);  // true
+export const ejemploComparacion = `console.log(10 > 5);  // true
 console.log(10 < 5);  // false
 console.log(10 >= 10); // true`;
 
-export const ejemploIgualdad = `// Estricta (Recomendada)
-console.log(5 === "5"); // false (Tipos distintos)
+export const ejemploIgualdad = `console.log(5 === "5"); // false (Tipos distintos)
 console.log(5 === 5);   // true
-
-// Débil (Evitar)
 console.log(5 == "5");  // true (Conversión implícita)`;
 
 export const ejemploLogicos = `// AND (&&) - Ambos deben ser true
@@ -48,3 +43,18 @@ console.log(false || false); // false
 // NOT (!) - Invierte el valor
 console.log(!true);  // false
 console.log(!false); // true`;
+
+export const ejemploShortCircuit = `const usuario = { nombre: "Ana" };
+
+// AND (&&): Ejecuta si existe
+usuario && console.log("Hola " + usuario.nombre);
+
+// OR (||): Valor por defecto
+const puerto = null || 3000;
+console.log(puerto); // 3000`;
+
+export const ejemploTernario = `const edad = 20;
+// Sintaxis: Condición ? ValorTrue : ValorFalse
+const tipo = edad >= 18 ? "Adulto" : "Menor";
+
+console.log(tipo); // "Adulto"`;

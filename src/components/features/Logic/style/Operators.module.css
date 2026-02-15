@@ -1,0 +1,118 @@
+.container h2 {
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.container p {
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    color: #ffffff;
+}
+
+.assignment {
+    margin-bottom: 1rem;
+}
+
+.assignment p {
+    margin-bottom: 0.5rem;
+}
+
+.arithmetic {
+    margin-bottom: 1rem;
+}
+
+.arithmetic p {
+    margin-bottom: 0.5rem;
+}
+
+.module {
+    margin-bottom: 1rem;
+}
+
+.module p {
+    margin-bottom: 0.5rem;
+}
+
+.exponentiation {
+    margin-bottom: 1rem;
+}
+
+.exponentiation p {
+    margin-bottom: 0.5rem;
+}
+
+.unaries {
+    margin-bottom: 1rem;
+}
+
+.unaries p {
+    margin-bottom: 0.5rem;
+}
+
+.relational {
+    margin-bottom: 1rem;
+}
+
+.relational p {
+    margin-bottom: 0.5rem;
+}
+
+.equality {
+    margin-bottom: 1rem;
+}
+
+.equality p {
+    margin-bottom: 0.5rem;
+}
+
+.boolean {
+    margin-bottom: 1rem;
+}
+
+.boolean p {
+    margin-bottom: 0.5rem;
+}
+
+/* Conditionals Styles */
+.if_else {
+    margin-bottom: 1rem;
+}
+
+.if_else p {
+    margin-bottom: 0.5rem;
+}
+
+.switch_case {
+    margin-bottom: 1rem;
+}
+
+.switch_case p {
+    margin-bottom: 0.5rem;
+}
+
+.ternary {
+    margin-bottom: 1rem;
+}
+
+.ternary p {
+    margin-bottom: 0.5rem;
+}
+
+.short_circuit {
+    margin-bottom: 1rem;
+}
+
+.short_circuit p {
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* Helpers */
+.text_danger {
+    color: #ff6b6b;
+}
+
+.text_success {
+    color: #51cf66;
+}

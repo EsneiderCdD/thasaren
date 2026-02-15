@@ -1,62 +1,68 @@
-import React from 'react';
 import ViewCode from "../../../components/reusables/ViewCode/ViewCode";
 import {
     ejemploAsignacion,
+    ejemploAsignacionCompuesta,
     ejemploAritmetica,
     ejemploModulo,
     ejemploUnarios,
     ejemploExponenciacion,
     ejemploComparacion,
     ejemploIgualdad,
-    ejemploLogicos
+    ejemploLogicos,
+    ejemploShortCircuit,
+    ejemploTernario
 } from "../../../data/codes/operators";
+import styles from "./style/Operators.module.css";
 
 const Operators = () => {
     return (
-        <div className="logic-operators">
-
-            <h2 style={{ marginBottom: '1.5rem', borderBottom: '2px solid #eee', paddingBottom: '0.5rem' }}>
+        <div className={styles.container}>
+            <h2>
                 Operadores
             </h2>
-            <p style={{ marginBottom: '2.5rem', fontSize: '1.05rem', color: '#555' }}>
+            <p >
                 Son símbolos especiales que realizan operaciones sobre operandos.
             </p>
 
-            {/* ASIGNACIÓN */}
-            <section style={{ marginBottom: '3rem' }}>
+            {/* assignment */}
+            <section className={styles.assignment}>
                 <h3>Asignación</h3>
-                <p style={{ marginBottom: '0.5rem' }}>
+                <p>
                     Guarda el valor de la derecha en la variable de la izquierda.
                 </p>
                 <ViewCode code={ejemploAsignacion} />
+                <p style={{ marginTop: '1rem' }}>
+                    <strong>Compuesta (+=, -=)</strong>: Opera y reasigna en un solo paso.
+                </p>
+                <ViewCode code={ejemploAsignacionCompuesta} />
             </section>
 
-            {/* ARITMÉTICA */}
-            <section style={{ marginBottom: '3rem' }}>
+            {/* arithmetic */}
+            <section className={styles.arithmetic}>
                 <h3>Aritmética Básica</h3>
-                <p style={{ marginBottom: '0.5rem' }}>
+                <p >
                     Operaciones matemáticas estándar: Suma <code>+</code>, Resta <code>-</code>, Multiplicación <code>*</code>, División <code>/</code>.
                 </p>
                 <ViewCode code={ejemploAritmetica} />
             </section>
 
-            {/* MÓDULO */}
-            <section style={{ marginBottom: '3rem' }}>
-                <h3>Módulo (%)</h3>
-                <p style={{ marginBottom: '0.5rem' }}>
-                    Devuelve el <strong>resto</strong> de una división. Fundamental para lógica cíclica (par/impar, relojes, patrones).
+            {/* module */}
+            <section className={styles.module}>
+
+                <p>
+                    <strong>Módulo (%)</strong>  Devuelve el <strong>resto</strong> de una división. Fundamental para lógica cíclica (par/impar, relojes, patrones).
                 </p>
                 <ViewCode code={ejemploModulo} />
             </section>
 
-            {/* EXPONENCIACIÓN */}
-            <section style={{ marginBottom: '3rem' }}>
-                <h3>Exponenciación (**)</h3>
+            {/* exponentiation */}
+            <section className={styles.exponentiation}>
+                <p><strong>Exponenciación (**)</strong> Eleva un número a la potencia de otro.</p>
                 <ViewCode code={ejemploExponenciacion} />
             </section>
 
-            {/* UNARIOS */}
-            <section style={{ marginBottom: '3rem' }}>
+            {/* unaries */}
+            <section className={styles.unaries}>
                 <h3>Incremento y Decremento</h3>
                 <p style={{ marginBottom: '0.5rem' }}>
                     Operadores unarios que modifican el valor en <code>1</code>.
@@ -64,31 +70,52 @@ const Operators = () => {
                 <ViewCode code={ejemploUnarios} />
             </section>
 
-            {/* RELACIONALES */}
-            <section style={{ marginBottom: '3rem' }}>
+            {/* RELATIONAL */}
+            <section className={styles.relational}>
                 <h3>Relacionales (Comparación)</h3>
-                <p style={{ marginBottom: '0.5rem' }}>
+                <p>
                     Comparan dos valores y retornan un booleano (<code>true</code> / <code>false</code>).
+                    <br />
+                    Incluyen: Mayor que (<strong>&gt;</strong>), Menor que (<strong>&lt;</strong>),
+                    Mayor o igual que (<strong>&gt;=</strong>) y Menor o igual que (<strong>&lt;=</strong>).
                 </p>
                 <ViewCode code={ejemploComparacion} />
             </section>
 
-            {/* IGUALDAD */}
-            <section style={{ marginBottom: '3rem' }}>
+            {/* EQUALITY */}
+            <section className={styles.equality}>
                 <h3>Igualdad</h3>
-                <p style={{ marginBottom: '0.5rem' }}>
-                    Distinción crítica: <code>===</code> compara valor y tipo (Estricto). <code>==</code> convierte tipos intentando igualar (Débil).
+                <p>
+                    Distinción crítica: <strong>===</strong> compara valor y tipo (Estricto). <strong>==</strong> convierte tipos intentando igualar (Débil).
                 </p>
                 <ViewCode code={ejemploIgualdad} />
             </section>
 
-            {/* LÓGICOS */}
-            <section style={{ marginBottom: '3rem' }}>
+            {/* boolean */}
+            <section className={styles.boolean}>
                 <h3>Lógicos (Booleanos)</h3>
-                <p style={{ marginBottom: '0.5rem' }}>
-                    Conectan expresiones de verdad: Y (<code>&&</code>), O (<code>||</code>), NO (<code>!</code>).
+                <p>
+                    Conectan expresiones de verdad: Y <strong>(<code>&&</code>)</strong>, O <strong>(<code>||</code>)</strong>, NO <strong>(<code>!</code>)</strong>.
                 </p>
                 <ViewCode code={ejemploLogicos} />
+            </section>
+
+            {/* short_circuit */}
+            <section className={styles.short_circuit}>
+                <h3 className={styles.text_success}>Short-Circuit (&& / ||)</h3>
+                <p>
+                    Uso de operadores lógicos para control de flujo. <strong><code>&&</code></strong> ejecuta si es verdadero ("Guard"), <strong><code>||</code></strong> asigna si es falso ("Default").
+                </p>
+                <ViewCode code={ejemploShortCircuit} />
+            </section>
+
+            {/* ternary */}
+            <section className={styles.ternary}>
+                <h3>Operador Ternario</h3>
+                <p>
+                    El único condicional que es una <strong>expresión</strong> (retorna valor). Úsalo para asignaciones simples en una línea.
+                </p>
+                <ViewCode code={ejemploTernario} />
             </section>
 
         </div>
