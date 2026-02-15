@@ -9,6 +9,7 @@ import BasicCSS from '../components/features/CSS/BasicCSS/BasicCSS';
 import HelloWorld from '../components/features/HelloWorld/HelloWorld';
 import Pruebas from '../pages/Pruebas';
 import ViewCodePage from '../pages/ViewCodePage';
+import Origin from '../pages/Origin';
 
 const AppRoutes = () => {
     const element = useRoutes([
@@ -24,7 +25,8 @@ const AppRoutes = () => {
                 { path: 'basiccss', element: <BasicCSS /> },
                 { path: 'helloworld', element: <HelloWorld /> },
                 { path: 'pruebas', element: <Pruebas /> },
-                { path: 'idecss', element: <ViewCodePage /> }
+                { path: 'idecss', element: <ViewCodePage /> },
+                { path: 'origin', element: <Origin /> },
             ],
         },
     ]);

@@ -17,6 +17,9 @@ function NavbarGrid() {
             <Link to="/helloworld" >
                 <Square title="Hello World" type="rectangle" />
             </Link>
+            <Link to="/origin">
+                <Square title="Origin" type="rectangle"/>
+            </Link>
         </nav>
     )
 }

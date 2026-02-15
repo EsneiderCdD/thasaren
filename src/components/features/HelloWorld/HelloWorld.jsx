@@ -17,7 +17,7 @@ function HelloWorld() {
                 <p>Cuando ese punto toma forma,</p> <i>cuando ese algo una intencion</i> <p>necesitamos saber como darle una instruccion</p>
             
             </div>
-                <Origin />
+                <Origin />|
         </div>
         
     );
