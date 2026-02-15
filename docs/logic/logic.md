@@ -2,16 +2,16 @@
 
 | Estado | Categoría | Concepto |
 | :---: | :--- | :--- |
-| [ ] | **Condicionales** | `if`, `else if`, `else` |
-| [ ] | **Condicionales** | `switch` |
-| [ ] | **Condicionales** | Operador ternario `? :` |
-| [ ] | **Condicionales** | Operadores lógicos `&&`, `\|\|`, `!` |
+| ✅ | **Condicionales** | `if`, `else if`, `else` |
+| ✅ | **Condicionales** | `switch` |
+| ✅ | **Condicionales** | Operador ternario `? :` |
+| ✅ | **Condicionales** | Operadores lógicos `&&`, `\|\|`, `!` |
 | [ ] | **Condicionales** | Nullish coalescing `??` |
 | [ ] | **Condicionales** | Optional chaining `?.` |
-| [ ] | **Condicionales** | Guard clauses (early return) |
-| [ ] | **Condicionales** | Evitar condicionales anidados |
+| ✅ | **Condicionales** | Guard clauses (early return) |
+| ✅ | **Condicionales** | Evitar condicionales anidados |
 | [ ] | **Condicionales** | Truthy vs Falsy en JavaScript |
-| [ ] | **Condicionales** | Comparación estricta `===` vs `==` |
+| ✅ | **Condicionales** | Comparación estricta `===` vs `==` |
 | [ ] | **Funciones Puras** | Qué es una función pura |
 | [ ] | **Funciones Puras** | Mismo input → mismo output |
 | [ ] | **Funciones Puras** | Evitar efectos secundarios |
@@ -31,7 +31,7 @@
 | [ ] | **Control de Flujo** | `Promise` |
 | [ ] | **Control de Flujo** | `async`/`await` |
 | [ ] | **Closures** | Scope (alcance de variables) |
-| [ ] | **Closures** | Scope global, de función y de bloque (`let`, `const`) |
+| ✅ | **Closures** | Scope global, de función y de bloque (`let`, `const`) |
 | [ ] | **Closures** | Contexto léxico |
 | [ ] | **Closures** | Qué es un closure |
 | [ ] | **Closures** | Funciones que retornan funciones |
@@ -40,8 +40,8 @@
 | [ ] | **Closures** | Closures en callbacks |
 | [ ] | **Closures** | Closures en loops (problema clásico con `var`) |
 | [ ] | **Closures** | Aplicaciones prácticas (factory functions) |
-| [ ] | **Validaciones** | Validaciones de tipo (`typeof`, `instanceof`) |
-| [ ] | **Validaciones** | Validaciones de `null`/`undefined` |
+| ✅ | **Validaciones** | Validaciones de tipo (`typeof`, `instanceof`) |
+| ✅ | **Validaciones** | Validaciones de `null`/`undefined` |
 | [ ] | **Validaciones** | Sanitización de datos |
 | [ ] | **Validaciones** | Validación de formularios |
 | [ ] | **Validaciones** | Expresiones regulares |

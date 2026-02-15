@@ -8,6 +8,7 @@ import ViewCodePage from '../pages/ViewCodePage';
 import Entity from '../pages/Entity';
 import List from '../pages/List';
 import Logic from '../pages/Logic';
+import Structures from '../pages/Structures';
 import RouterPage from '../pages/Router';
 import Cycle from '../pages/Cycle';
 import Action from '../pages/Action';
@@ -29,7 +30,10 @@ const AppRoutes = () => {
 
                 { path: 'entity', element: <Entity /> },
                 { path: 'list', element: <List /> },
+
                 { path: 'logic', element: <Logic /> },
+                { path: 'structures', element: <Structures /> },
+
                 { path: 'router', element: <RouterPage /> },
                 { path: 'cycle', element: <Cycle /> },
                 { path: 'action', element: <Action /> },
