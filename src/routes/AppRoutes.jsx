@@ -3,13 +3,12 @@ import Layout from '../components/reusables/Layout/Layout';
 import Home from '../pages/Home';
 import Estructura from '../pages/Estructura';
 import Tabla from '../pages/Tabla';
-import Init from '../components/features/Init/Init';
-import RRD from '../components/features/ReactRouterDOM/ReactRouterDOM';
-import BasicCSS from '../components/features/CSS/BasicCSS/BasicCSS';
-import HelloWorld from '../components/features/HelloWorld/HelloWorld';
-import Pruebas from '../pages/Pruebas';
+
 import ViewCodePage from '../pages/ViewCodePage';
 import Origin from '../pages/Origin';
+import Entity from '../pages/Entity';
+import List from '../pages/List';
+import Logic from '../pages/Logic';
 
 const AppRoutes = () => {
     const element = useRoutes([
@@ -20,13 +19,12 @@ const AppRoutes = () => {
                 { index: true, element: <Home /> },
                 { path: 'estructura', element: <Estructura /> },
                 { path: 'tabla', element: <Tabla /> },
-                { path: 'initialize', element: <Init /> },
-                { path: 'rrd', element: <RRD /> },
-                { path: 'basiccss', element: <BasicCSS /> },
-                { path: 'helloworld', element: <HelloWorld /> },
-                { path: 'pruebas', element: <Pruebas /> },
+
                 { path: 'idecss', element: <ViewCodePage /> },
                 { path: 'origin', element: <Origin /> },
+                { path: 'entity', element: <Entity /> },
+                { path: 'list', element: <List /> },
+                { path: 'logic', element: <Logic /> },
             ],
         },
     ]);

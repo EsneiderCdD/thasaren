@@ -5,7 +5,7 @@ import {
     ejemploInyeccion,
     ejemploTokenizer,
     ejemploCSS
-} from "../components/reusables/ViewCode/code/data";
+} from "../data/codes/viewcode";
 
 const ViewCodePage = () => {
     return (

@@ -5,20 +5,17 @@ import { Link } from 'react-router-dom';
 function NavbarGrid() {
     return (
         <nav>
-            <Link to="/initialize">
-                <Square title="Initialize" type="square" />
-            </Link>
-            <Link to="/rrd">
-                <Square title="React Router DOM" type="rectangle" />
-            </Link>
-            <Link to="/basiccss" >
-                <Square title="Basic CSS" type="square" />
-            </Link>
-            <Link to="/helloworld" >
-                <Square title="Hello World" type="rectangle" />
-            </Link>
             <Link to="/origin">
-                <Square title="Origin" type="rectangle"/>
+                <Square title="Origin" type="rectangle" />
+            </Link>
+            <Link to="/entity">
+                <Square title="Entity" type="square" />
+            </Link>
+            <Link to="/list">
+                <Square title="List" type="rectangle" />
+            </Link>
+            <Link to="/logic">
+                <Square title="Logic" type="square" />
             </Link>
         </nav>
     )
