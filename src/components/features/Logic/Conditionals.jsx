@@ -5,7 +5,7 @@ import {
     ejemploGuardClauseProblema,
     ejemploGuardClauseSolucion
 } from "../../../data/codes/conditionals";
-import styles from "./style/Operators.module.css";
+import styles from "./style/Logic.module.css";
 
 const Conditionals = () => {
     return (

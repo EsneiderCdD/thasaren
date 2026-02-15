@@ -1,3 +1,8 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .container h2 {
     margin-top: 2rem;
     padding-bottom: 0.5rem;
@@ -73,6 +78,22 @@
     margin-bottom: 0.5rem;
 }
 
+.short_circuit {
+    margin-bottom: 1rem;
+}
+
+.short_circuit p {
+    margin-bottom: 0.5rem;
+}
+
+.ternary {
+    margin-bottom: 1rem;
+}
+
+.ternary p {
+    margin-bottom: 0.5rem;
+}
+
 /* Conditionals Styles */
 .if_else {
     margin-bottom: 1rem;
@@ -90,29 +111,46 @@
     margin-bottom: 0.5rem;
 }
 
-.ternary {
+.guard_pattern {
     margin-bottom: 1rem;
 }
-
-.ternary p {
-    margin-bottom: 0.5rem;
-}
-
-.short_circuit {
-    margin-bottom: 1rem;
-}
-
-.short_circuit p {
-    margin-bottom: 0.5rem;
-}
-
-
 
 /* Helpers */
 .text_danger {
     color: #ff6b6b;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .text_success {
     color: #51cf66;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Variables & Types Styles */
+.variables {
+    margin-bottom: 1rem;
+}
+
+.variables p {
+    margin-bottom: 0.5rem;
+}
+
+.data_types {
+    margin-bottom: 1rem;
+}
+
+.data_types p {
+    margin-bottom: 0.5rem;
+}
+
+.value_absence {
+    margin-bottom: 1rem;
+}
+
+.value_absence p {
+    margin-bottom: 0.5rem;
 }

@@ -4,7 +4,7 @@ import Layout from '../components/reusables/Layout/Layout';
 import Home from '../pages/Home';
 
 import ViewCodePage from '../pages/ViewCodePage';
-import Origin from '../pages/Origin';
+
 import Entity from '../pages/Entity';
 import List from '../pages/List';
 import Logic from '../pages/Logic';
@@ -26,7 +26,7 @@ const AppRoutes = () => {
                 { index: true, element: <Home /> },
 
                 { path: 'idecss', element: <ViewCodePage /> },
-                { path: 'origin', element: <Origin /> },
+
                 { path: 'entity', element: <Entity /> },
                 { path: 'list', element: <List /> },
                 { path: 'logic', element: <Logic /> },

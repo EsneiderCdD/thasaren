@@ -12,7 +12,7 @@ import {
     ejemploShortCircuit,
     ejemploTernario
 } from "../../../data/codes/operators";
-import styles from "./style/Operators.module.css";
+import styles from "./style/Logic.module.css";
 
 const Operators = () => {
     return (
