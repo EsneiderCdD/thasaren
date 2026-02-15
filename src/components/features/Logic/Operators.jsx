@@ -31,7 +31,7 @@ const Operators = () => {
                     Guarda el valor de la derecha en la variable de la izquierda.
                 </p>
                 <ViewCode code={ejemploAsignacion} />
-                <p style={{ marginTop: '1rem' }}>
+                <p>
                     <strong>Compuesta (+=, -=)</strong>: Opera y reasigna en un solo paso.
                 </p>
                 <ViewCode code={ejemploAsignacionCompuesta} />
@@ -64,7 +64,7 @@ const Operators = () => {
             {/* unaries */}
             <section className={styles.unaries}>
                 <h3>Incremento y Decremento</h3>
-                <p style={{ marginBottom: '0.5rem' }}>
+                <p>
                     Operadores unarios que modifican el valor en <code>1</code>.
                 </p>
                 <ViewCode code={ejemploUnarios} />

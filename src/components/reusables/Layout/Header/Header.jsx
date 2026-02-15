@@ -1,16 +1,17 @@
+
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles/Header.css';
+import styles from './styles/Header.module.css';
 
 const Header = () => {
     return (
-        <header className="header">
-            <div className="container header-container">
-                <h1 className="header-logo">Min.</h1>
+        <header className={styles.header}>
+            <div className={`container ${styles['header-container']}`}>
+                <div className={styles['header-logo']}>Thasaren</div>
                 <nav>
-                    <ul className="nav-list">
+                    <ul className={styles['nav-list']}>
                         <li><Link to="/">Inicio</Link></li>
-                        <li><Link to="/estructura">Estructura</Link></li>
-                        <li><Link to="/tabla">Datos</Link></li>
+                        <li><Link to="/router">Router</Link></li>
                         <li><Link to="/idecss">IDE CSS</Link></li>
                     </ul>
                 </nav>

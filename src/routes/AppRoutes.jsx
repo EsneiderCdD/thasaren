@@ -1,14 +1,14 @@
+
 import { useRoutes } from 'react-router-dom';
 import Layout from '../components/reusables/Layout/Layout';
 import Home from '../pages/Home';
-import Estructura from '../pages/Estructura';
-import Tabla from '../pages/Tabla';
 
 import ViewCodePage from '../pages/ViewCodePage';
 import Origin from '../pages/Origin';
 import Entity from '../pages/Entity';
 import List from '../pages/List';
 import Logic from '../pages/Logic';
+import RouterPage from '../pages/Router';
 import Cycle from '../pages/Cycle';
 import Action from '../pages/Action';
 import Dom from '../pages/Dom';
@@ -24,14 +24,13 @@ const AppRoutes = () => {
             element: <Layout />,
             children: [
                 { index: true, element: <Home /> },
-                { path: 'estructura', element: <Estructura /> },
-                { path: 'tabla', element: <Tabla /> },
 
                 { path: 'idecss', element: <ViewCodePage /> },
                 { path: 'origin', element: <Origin /> },
                 { path: 'entity', element: <Entity /> },
                 { path: 'list', element: <List /> },
                 { path: 'logic', element: <Logic /> },
+                { path: 'router', element: <RouterPage /> },
                 { path: 'cycle', element: <Cycle /> },
                 { path: 'action', element: <Action /> },
                 { path: 'dom', element: <Dom /> },
