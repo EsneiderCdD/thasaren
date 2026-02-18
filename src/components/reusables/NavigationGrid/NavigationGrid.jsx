@@ -5,12 +5,6 @@ import { Link } from 'react-router-dom';
 function NavbarGrid() {
     return (
         <nav>
-            <Link to="/entity">
-                <Square title="Entity" type="square" />
-            </Link>
-            <Link to="/list">
-                <Square title="List" type="rectangle" />
-            </Link>
             <Link to="/logic">
                 <Square title="Logic" type="square" />
             </Link>
