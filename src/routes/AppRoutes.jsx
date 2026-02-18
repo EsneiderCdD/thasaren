@@ -17,6 +17,7 @@ import Async from '../pages/Async';
 import Api from '../pages/Api';
 import ClassPage from '../pages/Class';
 import Memory from '../pages/Memory';
+import StateToggle from '../pages/StateToggle';
 
 const AppRoutes = () => {
     const element = useRoutes([
@@ -42,6 +43,7 @@ const AppRoutes = () => {
                 { path: 'api', element: <Api /> },
                 { path: 'class', element: <ClassPage /> },
                 { path: 'memory', element: <Memory /> },
+                { path: 'state-toggle', element: <StateToggle /> },
             ],
         },
     ]);

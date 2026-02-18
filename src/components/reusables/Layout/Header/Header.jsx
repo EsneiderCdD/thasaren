@@ -13,6 +13,7 @@ const Header = () => {
                         <li><Link to="/">Inicio</Link></li>
                         <li><Link to="/router">Router</Link></li>
                         <li><Link to="/idecss">IDE CSS</Link></li>
+                        <li><Link to="/state-toggle">State Toggle</Link></li>
                     </ul>
                 </nav>
             </div>

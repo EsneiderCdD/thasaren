@@ -34,9 +34,3 @@ console.log(usuario); // undefined (No inicializada)`;
 export const ejemploNull = `let respuesta = null;
 console.log(respuesta); // null (Valor vacío intencional)`;
 
-export const ejemploDiferencias = `let a;
-let b = null;
-
-console.log(a === b); // false (Distintos tipos/valores)
-console.log(typeof a); // "undefined"
-console.log(typeof b); // "object" (Error histórico de JS)`;
