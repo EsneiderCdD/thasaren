@@ -74,42 +74,50 @@ const VariablesAndTypes = () => {
 
     return (
         <div className={styles.container}>
-            <h2>Declaración de Variables</h2>
-            <p>
-                Para persistir un valor en el tiempo de ejecución, se requiere un espacio en memoria. Declarar es la instrucción explícita al motor para reservar dicho espacio.
-            </p>
-            {/* Variables */}
-            <div>
-                <button onClick={() => setVariableDeclaration('var')}>Var</button>
-                <button onClick={() => setVariableDeclaration('let')}>Let</button>
-                <button onClick={() => setVariableDeclaration('const')}>Cont</button>
-            </div>
+            <div className={styles.variables}>
 
+                <div className={styles.variables_header}>
+                    <div className={styles.variables_info}>
 
-            <section className={styles.variables}>
+                        <h2>Declaración de Variables</h2>
+                        <p>
+                            Para persistir un valor en el tiempo de ejecución, se requiere un espacio en memoria. Declarar es la instrucción explícita al motor para reservar dicho espacio.
+                        </p>
+                    </div>
+
+                    <div className={styles.variables_buttons}>
+                        <button onClick={() => setVariableDeclaration('var')}>Var</button>
+                        <button onClick={() => setVariableDeclaration('let')}>Let</button>
+                        <button onClick={() => setVariableDeclaration('const')}>Cont</button>
+                    </div>
+                </div>
                 <h3>{currentData.title}</h3>
                 <p>{currentData.description}</p>
                 <ViewCode code={currentData.code} />
-            </section>
+                <div className={styles.data_types}>
 
-            <h2>Tipos de Datos</h2>
-            <p>
-                Un tipo de dato define el conjunto de valores que una variable puede almacenar y las operaciones válidas que se pueden realizar sobre ella.
-            </p>
-            {/* Types */}
-            <div>
-                <button onClick={() => setDataType('number')}>Number</button>
-                <button onClick={() => setDataType('string')}>String</button>
-                <button onClick={() => setDataType('boolean')}>Boolean</button>
-                <button onClick={() => setDataType('undefined')}>Undefined</button>
-                <button onClick={() => setDataType('null')}>Null</button>
-            </div>
-            <section className={styles.data_types}>
+
+                    <div className={styles.types_info}>
+                        <h2>Tipos de Datos</h2>
+                        <p>
+                            Un tipo de dato define el conjunto de valores que una variable puede almacenar y las operaciones válidas que se pueden realizar sobre ella.
+                        </p>
+                    </div>
+                    {/* Types */}
+                    <div className={styles.types_buttons}>
+                        <button onClick={() => setDataType('number')}>Number</button>
+                        <button onClick={() => setDataType('string')}>String</button>
+                        <button onClick={() => setDataType('boolean')}>Boolean</button>
+                        <button onClick={() => setDataType('undefined')}>Undefined</button>
+                        <button onClick={() => setDataType('null')}>Null</button>
+                    </div>
+                </div>
+
                 <h3>{currentType.title}</h3>
                 <p>{currentType.description}</p>
                 <ViewCode code={currentType.code} />
-            </section>
 
+            </div>
         </div>
     );
 };

@@ -1,17 +1,31 @@
 // === CONDICIONALES ===
 
-export const ejemploIf = `let saldo = 100;
+// 1. IF
+export const ejemploIf = `let bateria = 15;
 
-if (saldo >= 500) {
-    console.log("Premium");
-} else if (saldo > 0) {
-    console.log("Básico"); // Se ejecuta esto
-} else {
-    console.log("Sin fondos");
+if (bateria < 20) {
+    console.log("⚠️ Batería baja");
 }`;
 
+// 2. ELSE IF
+export const ejemploElseIf = `let hora = 14;
 
+if (hora < 12) {
+    console.log("Buenos días");
+} else if (hora < 18) {
+    console.log("Buenas tardes");
+}`;
 
+// 3. ELSE
+export const ejemploElse = `let estaLloviendo = false;
+
+if (estaLloviendo) {
+    console.log("Lleva paraguas");
+} else {
+    console.log("Disfruta el día");
+}`;
+
+// 4. SWITCH
 export const ejemploSwitch = `const rol = "admin";
 
 switch (rol) {
@@ -24,7 +38,6 @@ switch (rol) {
     default:
         console.log("Lectura");
 }`;
-
 
 
 export const ejemploGuardClauseProblema = `// FORMA TRADICIONAL (A evitar)

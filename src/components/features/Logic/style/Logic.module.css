@@ -3,113 +3,100 @@
     margin: 0 auto;
 }
 
-.container h2 {
-    margin-top: 2rem;
-    padding-bottom: 0.5rem;
+.container th { 
+    text-align: left;
+
 }
 
-.container p {
-    margin-bottom: 2rem;
-    font-size: 1.05rem;
-    color: #ffffff;
-}
 
-.assignment {
+
+/* Variables & Types  */
+.variables {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 1rem;
+
 }
 
-.assignment p {
+.variables_header {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.variables_info {
+
+    width: 50%;
+}
+
+.variables_buttons {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.variables p {
     margin-bottom: 0.5rem;
 }
 
-.arithmetic {
-    margin-bottom: 1rem;
+
+.data_types {
+    display: flex;
+    flex-direction: row;
+
 }
 
-.arithmetic p {
+.data_types p {
     margin-bottom: 0.5rem;
 }
 
-.module {
+.types_info,
+.types_buttons {
+    flex: 1;
+}
+
+.types_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.conditionals_header {
+    display: flex;
+    flex-direction: row;
+}
+.conditionals_info,
+.conditionals_buttons {
+    flex: 1;
+}
+.conditionals_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+
+
+
+
+.value_absence {
     margin-bottom: 1rem;
 }
 
-.module p {
+.value_absence p {
     margin-bottom: 0.5rem;
 }
 
-.exponentiation {
-    margin-bottom: 1rem;
-}
 
-.exponentiation p {
-    margin-bottom: 0.5rem;
-}
 
-.unaries {
-    margin-bottom: 1rem;
-}
 
-.unaries p {
-    margin-bottom: 0.5rem;
-}
 
-.relational {
-    margin-bottom: 1rem;
-}
-
-.relational p {
-    margin-bottom: 0.5rem;
-}
-
-.equality {
-    margin-bottom: 1rem;
-}
-
-.equality p {
-    margin-bottom: 0.5rem;
-}
-
-.boolean {
-    margin-bottom: 1rem;
-}
-
-.boolean p {
-    margin-bottom: 0.5rem;
-}
-
-.short_circuit {
-    margin-bottom: 1rem;
-}
-
-.short_circuit p {
-    margin-bottom: 0.5rem;
-}
-
-.ternary {
-    margin-bottom: 1rem;
-}
-
-.ternary p {
-    margin-bottom: 0.5rem;
-}
-
-/* Conditionals Styles */
-.if_else {
-    margin-bottom: 1rem;
-}
-
-.if_else p {
-    margin-bottom: 0.5rem;
-}
-
-.switch_case {
-    margin-bottom: 1rem;
-}
-
-.switch_case p {
-    margin-bottom: 0.5rem;
-}
 
 .guard_pattern {
     margin-bottom: 1rem;
@@ -127,30 +114,5 @@
     color: #51cf66;
     font-size: 1rem;
     margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Variables & Types Styles */
-.variables {
-    margin-bottom: 1rem;
-}
-
-.variables p {
-    margin-bottom: 0.5rem;
-}
-
-.data_types {
-    margin-bottom: 1rem;
-}
-
-.data_types p {
-    margin-bottom: 0.5rem;
-}
-
-.value_absence {
-    margin-bottom: 1rem;
-}
-
-.value_absence p {
     margin-bottom: 0.5rem;
 }
