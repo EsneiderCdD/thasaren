@@ -40,9 +40,9 @@ export const corchetesSituacion = `const usuario = {
 
 const propiedadBuscada = "email"; `;
 
-export const corchetesError = `console.log(usuario.propiedadBuscada); // undefined`;
+export const corchetesError = `console.log(usuario.propiedadBuscada);`;
 
-export const corchetesSolucion = `console.log(usuario[propiedadBuscada]); // "ana@email.com"`;
+export const corchetesSolucion = `console.log(usuario[propiedadBuscada]);`;
 
 export const corchetesEspacios = `const libro = {
     "titulo del libro": "JavaScript Moderno",
@@ -64,22 +64,22 @@ export const metodoObjeto = `const user = {
     }
 };
   
-console.log(user.name);    // Acceso a propiedad: "Thasaren"
-console.log(user.talk());  // Ejecución de método: "Hola, soy Thasaren"`;
+console.log(user.name);    // "Thasaren"
+console.log(user.talk());  // "Hola, soy Thasaren"`;
 
-export const referenciaObjeto = `// Variables primitivas (Copia por valor)
+export const referenciaObjeto = `// Variables primitivas
 let a = 10;
 let b = a; 
 b = 20; 
-// a sigue siendo 10. Son independientes.
+// a sigue siendo 10.
 
-// Objetos (Copia por REFERENCIA)
+// Objetos
 const original = { valor: 10 };
-const copia = original; // ⚠️ Copia la dirección, NO el objeto
+const copia = original;
 
-copia.valor = 99; // ¡Modifica el original!
+copia.valor = 99;
 
-console.log(original.valor); // 99 (Afectado)`;
+console.log(original.valor); // 99`;
 
 export const destructuringObjeto = `const settings = { theme: "dark", fontSize: 16 };
 
@@ -88,7 +88,6 @@ const t = settings.theme;
 const f = settings.fontSize;
 
 // Forma moderna (Destructuring)
-// Extrae propiedades a variables del mismo nombre
 const { theme, fontSize } = settings;
 
 console.log(theme); // "dark"`;
@@ -96,13 +95,9 @@ console.log(theme); // "dark"`;
 export const spreadObjeto = `const base = { a: 1 };
 const extra = { b: 2 };
 
-// Problema: Object.assign() o mutaciones
-// Solución: Spread (...) crea una COPIA SUPERFICIAL nueva
-
 const copiaSegura = { ...base }; 
 copiaSegura.a = 99; // No afecta a 'base'
 
-// También sirve para unir (Merge)
 const combinado = { ...base, ...extra, c: 3 };
 
 console.log(combinado); // { a: 1, b: 2, c: 3 }`;
@@ -110,8 +105,7 @@ console.log(combinado); // { a: 1, b: 2, c: 3 }`;
 export const herenciaToString = `const player = { name: "Ecd" };
 
 // 1. Usando el método heredado por defecto
-// JS busca .toString() en player -> No está -> Sube a Object.prototype
-console.log("Ganador: " + player); 
+console.log("Ganador: " + player);
 // Resultado: "Ganador: [object Object]"
 
 
@@ -120,7 +114,6 @@ player.toString = function() {
     return this.name;
 };
 
-// JS encuentra TU .toString() primero y lo usa
 console.log("Ganador: " + player); 
 // Resultado: "Ganador: Ecd"`;
 

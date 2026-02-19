@@ -58,7 +58,7 @@
 }
 
 .dotnotation_code {
-    flex: 0 1 25%;
+    flex: 1 1 25%;
 
 }
 
@@ -69,7 +69,7 @@
 }
 
 .properties_text {
-    flex: 1 1 25%;
+    flex: 0.87 1 25%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -79,4 +79,184 @@
 .properties_code {
     flex: 1 1 25%;
 
+}
+
+/* --- BRACKET NOTATION BLOCKS --- */
+
+/* 1. situation */
+.bracket_situation {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.bracket_situation_text {
+    display: flex;
+    flex: 0.87 1 25%;
+    flex-direction: column;
+    text-align: right;
+    justify-content: center;
+}
+
+.bracket_situation_code {
+    flex: 1 1 25%;
+}
+
+/* 2. error vs solution */
+.bracket_comparison {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.bracket_comparison_text {
+    display: flex;
+    flex: 0.87 1 25%;
+    flex-direction: column;
+    text-align: right;
+    justify-content: center;
+}
+
+.bracket_comparison_code {
+    flex: 1 1 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* 3. add properties */
+.bracket_add {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.bracket_add_text {
+    display: flex;
+    flex: 0.87 1 25%;
+    flex-direction: column;
+    text-align: right;
+    justify-content: center;
+}
+
+.bracket_add_code {
+    flex: 1 1 25%;
+}
+
+/* 4. spaces */
+
+.bracket_spaces {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.bracket_spaces_text {
+    display: flex;
+    flex: 0.87 1 25%;
+    flex-direction: column;
+    text-align: right;
+}
+
+.bracket_spaces_code {
+    flex: 1 1 25%;
+}
+
+/* 5. methods */
+
+.methods_intro {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.methods_intro_text {
+    display: flex;
+    flex: 0.87 1 25%;
+    flex-direction: column;
+    text-align: right;
+}
+
+.methods_intro_code {
+    flex: 1 1 25%;
+}
+
+
+/* 6. prototype */
+.methods_prototype {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.methods_prototype_text {
+    display: flex;
+    flex: 0.87 1 25%;
+    flex-direction: column;
+    text-align: right;
+
+}
+
+.methods_prototype_code {
+    flex: 1 1 25%;
+}
+
+
+/* --- FINAL SECTIONS (Code Left / Text Right) --- */
+
+/* 7. Immutability */
+.immutability {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.immutability_code {
+    flex: 0 1 25%;
+}
+
+.immutability_text {
+    flex: 1 1 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: left;
+}
+
+/* 8. Destructuring */
+.destructuring {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.destructuring_code {
+    flex: 0 1 25%;
+}
+
+.destructuring_text {
+    flex: 1 1 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+/* 9. Spread Operator */
+.spread {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.spread_code {
+    flex: 1 1 45%;
+}
+
+.spread_text {
+    flex: 1 1 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }

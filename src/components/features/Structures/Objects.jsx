@@ -78,99 +78,142 @@ const Objects = () => {
 
             {accessType === 'bracketnotation' && (
                 <div>
-                    <div className={styles.block}>
-                        <h4>2. Notación de Corchetes (Bracket Notation)</h4>
-                        <p>
-                            Obligatoria cuando necesitas usar una <strong>variable</strong> para decidir qué propiedad leer.
-                            Los corchetes <code>[]</code> evalúan lo que tienen dentro antes de buscar.
-                        </p>
-
-                        <p>Situación: Tienes un objeto usuario, pero la propiedad que quieres leer está guardada en una variable externa.</p>
-                        <ViewCode code={corchetesSituacion} />
-
-                        <p>Si usamos la <strong>notación de punto</strong>, buscará literalmente una propiedad llamada "propiedadBuscada".</p>
-                        <ViewCode code={corchetesError} />
-
-                        <p>En cambio, si usamos la <strong>notación de corchetes</strong>, evaluará la variable y buscará la propiedad correspondiente.</p>
-                        <ViewCode code={corchetesSolucion} />
+                    {/* 1. situation */}
+                    <div className={styles.bracket_situation}>
+                        <div className={styles.bracket_situation_text}>
+                            <h4>Notación de Corchetes</h4>
+                            <p>
+                                Obligatoria cuando necesitas usar una <strong>variable</strong> para decidir qué propiedad leer.
+                                Los corchetes <code>[]</code> evalúan lo que tienen dentro antes de buscar.
+                            </p>
+                            <p className={styles.text_muted}>
+                                Situación: Tienes un objeto usuario, pero la propiedad que quieres leer está guardada en una variable externa ("email").
+                            </p>
+                        </div>
+                        <div className={styles.bracket_situation_code}>
+                            <ViewCode code={corchetesSituacion} />
+                        </div>
                     </div>
 
-                    <h3>Añadir Propiedades </h3>
-                    <div className={styles.block}>
-                        <p>
-                            Para agregar es:
-                        </p>
-                        <ViewCode code={anadirPropiedadCorchetes} />
+                    {/* 2. error vs solution */}
+                    <div className={styles.bracket_comparison}>
+                        <div className={styles.bracket_comparison_text}>
+                            <p>Si usamos <strong>punto</strong>, JS busca literalmente una propiedad llamada "propiedadBuscada".//undefined</p>
+                            <p>En cambio, con <strong>corchetes</strong>, JS evalúa la variable y encuentra el valor "email".//"ana@email.com"</p>
+                        </div>
+                        <div className={styles.bracket_comparison_code}>
+                            <ViewCode code={corchetesError} />
+                            <ViewCode code={corchetesSolucion} />
+                        </div>
                     </div>
 
-                    <div className={styles.block}>
-                        <h3>Otras razones para usar Corchetes</h3>
-                        <p>
-                            Además de variables dinámicas, son obligatorios cuando las claves tienen <strong>espacios</strong> o caracteres especiales (guiones, símbolos).
-                        </p>
-                        <ViewCode code={corchetesEspacios} />
+                    {/* 3. add properties */}
+                    <div className={styles.bracket_add}>
+                        <div className={styles.bracket_add_text}>
+                            <h4>Añadir con Corchetes</h4>
+                            <p>
+                                Sigue la misma lógica. Útil para claves dinámicas.
+                            </p>
+                        </div>
+                        <div className={styles.bracket_add_code}>
+                            <ViewCode code={anadirPropiedadCorchetes} />
+                        </div>
                     </div>
 
-                    <div className={styles.block}>
-                        <h3>Métodos de un Objeto</h3>
-                        <p>
-                            Hasta ahora hemos guardado datos. ¿Pero qué pasa si guardamos una <strong>función</strong> dentro de una propiedad? Obtenemos un método: una acción que el objeto puede realizar.
-                        </p>
-                        <ViewCode code={metodoObjeto} />
-                        <p className={styles.text_muted}>
-                            Nota: Si vienes de otros lenguajes, esto es la base de la Programación Orientada a Objetos (Clases), aunque aquí lo hacemos directamente sobre el objeto.
-                        </p>
-                        <h3>Métodos Heredados (Object Prototype)</h3>
-                        <p>
-                            Todos los objetos en JavaScript "heredan" funcionalidades de un padre común llamado <code>Object.prototype</code>.
-                            Esto significa que tu objeto ya trae herramientas de fábrica que tú no escribiste.
-                        </p>
+                    {/* 4. spaces */}
+                    <div className={styles.bracket_spaces}>
+                        <div className={styles.bracket_spaces_text}>
+                            <h4>Espacios y Caracteres</h4>
+                            <p>
+                                La única forma de leer claves con espacios ("titulo libro") es usando strings dentro de corchetes.
+                            </p>
+                        </div>
+                        <div className={styles.bracket_spaces_code}>
+                            <ViewCode code={corchetesEspacios} />
+                        </div>
+                    </div>
 
-                        <p>Un ejemplo clásico es <code>.toString()</code>:</p>
-                        <ul>
-                            <li>Es el método que JS usa internamente cuando necesita convertir tu objeto a texto.</li>
-                            <li>Por defecto devuelve <code>[object Object]</code>.</li>
-                            <li>Podemos <strong>sobreescribirlo</strong> para que devuelva algo útil (como una autoreferencia personalizada).</li>
-                        </ul>
-                        <ViewCode code={herenciaToString} />
+                    {/* 5. methods */}
+                    <div className={styles.methods_intro}>
+                        <div className={styles.methods_intro_text}>
+                            <h3>Métodos (Acciones)</h3>
+                            <p>
+                                Si una propiedad guarda una <strong>función</strong>, se convierte en un método.
+                                Usamos <code>this</code> para acceder a los datos del propio objeto.
+                            </p>
+                        </div>
+                        <div className={styles.methods_intro_code}>
+                            <ViewCode code={metodoObjeto} />
+                        </div>
+                    </div>
+
+                    {/* 6. prototype */}
+                    <div className={styles.methods_prototype}>
+                        <div className={styles.methods_prototype_text}>
+                            <h3>Herencia (Prototype)</h3>
+                            <p>
+                                Todo objeto hereda de <code>Object.prototype</code>.
+                            </p>
+                            <p>
+                                Ejemplo: <code>.toString()</code> existe aunque tú no lo crearas. Podemos sobreescribirlo (Shadowing) para personalizarlo.
+                            </p>
+                        </div>
+                        <div className={styles.methods_prototype_code}>
+                            <ViewCode code={herenciaToString} />
+                        </div>
                     </div>
 
                 </div>
             )}
 
 
-            <div className={styles.block}>
-                <h3>Inmutabilidad y Referencia</h3>
-                <p>
-                    Aquí está la trampa #1. Cuando usas variables normales (<code>let a = 5</code>), el valor es independiente.
-                    Pero en objetos, la variable no guarda el objeto, sino su <strong>dirección en memoria</strong>.
-                </p>
-                <p className={styles.text_muted}>
-                    ¡Cuidado! Si asignas un objeto a otra variable, ambas apuntarán al mismo sitio. Si cambias uno, cambias el otro.
-                </p>
-                <ViewCode code={referenciaObjeto} />
+            {/* 7. Inmutabilidad */}
+            <div className={styles.immutability}>
+                <div className={styles.immutability_code}>
+                    <ViewCode code={referenciaObjeto} />
+                </div>
+                <div className={styles.immutability_text}>
+                    <h3>Inmutabilidad y Referencia</h3>
+                    <p>
+                        Aquí está la trampa #1. Cuando usas variables normales (<code>let a = 5</code>), el valor es independiente.
+                        Pero en objetos, la variable no guarda el objeto, sino su <strong>dirección en memoria</strong>.
+                    </p>
+                    <p className={styles.text_muted}>
+                        ¡Cuidado! Si asignas un objeto a otra variable, ambas apuntarán al mismo sitio. Si cambias uno, cambias el otro.
+                    </p>
+                </div>
             </div>
 
-            <div className={styles.block}>
-                <h3>Destructuring (Extracción)</h3>
-                <p>
-                    Ya sabemos acceder con punto y corchetes, pero ¿qué si queremos sacar múltiples propiedades a la vez?
-                </p>
-                <p>
-                    La <strong>desestructuración</strong> es la sintaxis moderna para "desempaquetar" valores directamente a variables limpias.
-                </p>
-                <ViewCode code={destructuringObjeto} />
+            {/* 8. Destructuring */}
+            <div className={styles.destructuring}>
+                <div className={styles.destructuring_code}>
+                    <ViewCode code={destructuringObjeto} />
+                </div>
+                <div className={styles.destructuring_text}>
+                    <h3>Destructuring (Extracción)</h3>
+                    <p>
+                        Ya sabemos acceder con punto y corchetes, pero ¿qué si queremos sacar múltiples propiedades a la vez?
+                    </p>
+                    <p>
+                        La <strong>desestructuración</strong> es la sintaxis moderna para "desempaquetar" valores directamente a variables limpias.
+                    </p>
+                </div>
             </div>
 
-            <div className={styles.block}>
-                <h3>Spread Operator (...)</h3>
-                <p>
-                    Si la asignación (<code>=</code>) solo copia la referencia (el problema que vimos arriba), ¿cómo creamos una copia real e independiente?
-                </p>
-                <p>
-                    El operador Spread (<code>...</code>) "esparce" las propiedades en un nuevo objeto, creando una <strong>Shallow Copy</strong> (Copia Superficial) segura.
-                </p>
-                <ViewCode code={spreadObjeto} />
+            {/* 9. Spread Operator */}
+            <div className={styles.spread}>
+                <div className={styles.spread_code}>
+                    <ViewCode code={spreadObjeto} />
+                </div>
+                <div className={styles.spread_text}>
+                    <h3>Spread Operator (...)</h3>
+                    <p>
+                        Si la asignación (<code>=</code>) solo copia la referencia (el problema que vimos arriba), ¿cómo creamos una copia real e independiente?
+                    </p>
+                    <p>
+                        El operador Spread (<code>...</code>) "esparce" las propiedades en un nuevo objeto, creando una <strong>Shallow Copy</strong> (Copia Superficial) segura.
+                    </p>
+                </div>
             </div>
 
         </section>
