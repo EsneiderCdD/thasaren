@@ -5,8 +5,6 @@ import Home from '../pages/Home';
 
 import ViewCodePage from '../pages/ViewCodePage';
 
-import Entity from '../pages/Entity';
-import List from '../pages/List';
 import Logic from '../pages/Logic';
 import Structures from '../pages/Structures';
 import RouterPage from '../pages/Router';
@@ -28,9 +26,6 @@ const AppRoutes = () => {
                 { index: true, element: <Home /> },
 
                 { path: 'idecss', element: <ViewCodePage /> },
-
-                { path: 'entity', element: <Entity /> },
-                { path: 'list', element: <List /> },
 
                 { path: 'logic', element: <Logic /> },
                 { path: 'structures', element: <Structures /> },
