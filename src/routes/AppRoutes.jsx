@@ -16,6 +16,7 @@ import Api from '../pages/Api';
 import ClassPage from '../pages/Class';
 import Memory from '../pages/Memory';
 import StateToggle from '../pages/StateToggle';
+import LogicExercises from '../components/features/Logic/Exercises/LogicExercises';
 
 const AppRoutes = () => {
     const element = useRoutes([
@@ -28,6 +29,7 @@ const AppRoutes = () => {
                 { path: 'idecss', element: <ViewCodePage /> },
 
                 { path: 'logic', element: <Logic /> },
+                { path: 'logic/exercises/:id', element: <LogicExercises /> },
                 { path: 'structures', element: <Structures /> },
 
                 { path: 'router', element: <RouterPage /> },

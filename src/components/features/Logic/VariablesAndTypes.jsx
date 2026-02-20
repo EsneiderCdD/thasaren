@@ -10,7 +10,7 @@ import {
     ejemploBoolean,
     ejemploUndefined,
     ejemploNull,
-} from "../../../data/codes/variables";
+} from "./data/variables";
 import styles from "./style/Logic.module.css";
 
 const types = {
