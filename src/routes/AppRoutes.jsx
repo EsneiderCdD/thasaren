@@ -17,6 +17,7 @@ import ClassPage from '../pages/Class';
 import Memory from '../pages/Memory';
 import StateToggle from '../pages/StateToggle';
 import LogicExercises from '../components/features/Logic/Exercises/LogicExercises';
+import StructureExercises from '../components/features/Structures/Exercises/StructureExercises';
 
 const AppRoutes = () => {
     const element = useRoutes([
@@ -31,6 +32,7 @@ const AppRoutes = () => {
                 { path: 'logic', element: <Logic /> },
                 { path: 'logic/exercises/:id', element: <LogicExercises /> },
                 { path: 'structures', element: <Structures /> },
+                { path: 'structures/exercises/:id', element: <StructureExercises /> },
 
                 { path: 'router', element: <RouterPage /> },
                 { path: 'cycle', element: <Cycle /> },

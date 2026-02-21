@@ -3,6 +3,7 @@ import Objects from '../components/features/Structures/Objects';
 import Arrays from '../components/features/Structures/Arrays';
 import styles from '../components/features/Structures/style/Structures.module.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Structures = () => {
     const [activeTab, setActiveTab] = useState('object');
     return (
@@ -15,6 +16,10 @@ const Structures = () => {
             </div>
             {activeTab === 'object' && <Objects />}
             {activeTab === 'array' && <Arrays />}
+
+            <Link to="/structures/exercises/1">
+                <button>Ejercicios</button>
+            </Link>
 
 
         </div>
