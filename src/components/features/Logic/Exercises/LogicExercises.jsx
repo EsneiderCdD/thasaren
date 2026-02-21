@@ -3,6 +3,7 @@ import ViewCode from '../../../reusables/ViewCode/ViewCode';
 import { logicExercises } from '../data/logicExercises';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import styles from "../style/Logic.module.css";
 
 
 function LogicExercises({ }) {
@@ -15,7 +16,7 @@ function LogicExercises({ }) {
     const nextId = currentId + 1;
 
     return (
-        <div>
+        <div className={styles.container}>
             <h1>
                 Ejercicios de Logica
             </h1>
