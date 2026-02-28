@@ -8,7 +8,8 @@ import ViewCodePage from '../pages/ViewCodePage';
 import VariablesAndTypesPage from '../pages/VariablesAndTypesPage';
 import OperatorsPage from '../pages/OperatorsPage';
 import ConditionalsPage from '../pages/ConditionalsPage';
-import Structures from '../pages/Structures';
+import ObjectsPage from '../pages/ObjectsPage';
+import ArraysPage from '../pages/ArraysPage';
 import RouterPage from '../pages/Router';
 import Cycle from '../pages/Cycle';
 import Action from '../pages/Action';
@@ -36,7 +37,8 @@ const AppRoutes = () => {
                 { path: 'operators', element: <OperatorsPage /> },
                 { path: 'conditionals', element: <ConditionalsPage /> },
                 { path: 'logic/exercises/:id', element: <LogicExercises /> },
-                { path: 'structures', element: <Structures /> },
+                { path: 'objects', element: <ObjectsPage /> },
+                { path: 'arrays', element: <ArraysPage /> },
                 { path: 'structures/exercises/:id', element: <StructureExercises /> },
                 { path: 'cycle', element: <Cycle /> },
                 { path: 'cycle/exercise/:id', element: <CycleExercises /> },

@@ -15,8 +15,11 @@ function NavbarGrid() {
                 <Square title="Conditionals" type="square" />
             </Link>
 
-            <Link to="/structures">
-                <Square title="Structures" type="rectangle" />
+            <Link to="/objects">
+                <Square title="Objects" type="rectangle" />
+            </Link>
+            <Link to="/arrays">
+                <Square title="Arrays" type="square" />
             </Link>
 
             <Link to="/cycle">
