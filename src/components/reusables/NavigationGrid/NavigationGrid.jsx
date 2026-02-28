@@ -5,8 +5,14 @@ import { Link } from 'react-router-dom';
 function NavbarGrid() {
     return (
         <nav>
-            <Link to="/logic">
-                <Square title="Logic" type="square" />
+            <Link to="/variables-and-types">
+                <Square title="Variables & Types" type="square" />
+            </Link>
+            <Link to="/operators">
+                <Square title="Operators" type="rectangle" />
+            </Link>
+            <Link to="/conditionals">
+                <Square title="Conditionals" type="square" />
             </Link>
 
             <Link to="/structures">

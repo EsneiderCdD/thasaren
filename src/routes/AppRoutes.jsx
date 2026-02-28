@@ -5,7 +5,9 @@ import Home from '../pages/Home';
 
 import ViewCodePage from '../pages/ViewCodePage';
 
-import Logic from '../pages/Logic';
+import VariablesAndTypesPage from '../pages/VariablesAndTypesPage';
+import OperatorsPage from '../pages/OperatorsPage';
+import ConditionalsPage from '../pages/ConditionalsPage';
 import Structures from '../pages/Structures';
 import RouterPage from '../pages/Router';
 import Cycle from '../pages/Cycle';
@@ -30,7 +32,9 @@ const AppRoutes = () => {
 
                 { path: 'idecss', element: <ViewCodePage /> },
 
-                { path: 'logic', element: <Logic /> },
+                { path: 'variables-and-types', element: <VariablesAndTypesPage /> },
+                { path: 'operators', element: <OperatorsPage /> },
+                { path: 'conditionals', element: <ConditionalsPage /> },
                 { path: 'logic/exercises/:id', element: <LogicExercises /> },
                 { path: 'structures', element: <Structures /> },
                 { path: 'structures/exercises/:id', element: <StructureExercises /> },
