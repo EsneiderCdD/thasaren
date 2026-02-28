@@ -11,12 +11,42 @@ export const tokenizeLine = (line, language = 'javascript') => {
 
     const patterns = [
         {
+            regex: /\/\/.*/g,
+            className: 'comment'
+        },
+
+        {
+            regex: /(?<=\b(var|let|const)\s+)\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g,
+            className: 'identifier'
+        },
+        {
+            regex: /\b(console)\b/g,
+            className: 'object'
+        },
+        {
+            regex: /(?<=\.)(log|warn|error|info)\b/g,
+            className: 'method'
+        },
+
+        {
+            regex: /\b(const|let|var)\b/g,
+            className: 'declarator'
+        },
+        {
+            regex: /\b(function|return|if|else|class|async|await|try|catch|throw|new|this)\b/g,
+            className: 'keyword'
+        },
+        {
+            regex: /\b(typeof)\b/g,
+            className: 'operator'
+        },
+        {
             regex: /(["'`])(.*?)\1/g,
             className: 'string'
         },
         {
-            regex: /\b(const|let|var|function|return|if|else|class|async|await|try|catch|throw|new|this)\b/g,
-            className: 'keyword'
+            regex: /[()]/g,
+            className: 'delimiters'
         },
         {
             regex: /\b(true|false|null|undefined)\b/g,
@@ -26,6 +56,12 @@ export const tokenizeLine = (line, language = 'javascript') => {
             regex: /\b(\d+)\b/g,
             className: 'number'
         },
+        {
+            regex: /\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g,
+            className: 'identifier-usage'
+        },
+
+
     ];
 
     // Creamos un array de "segmentos" (partes del texto)
@@ -34,7 +70,7 @@ export const tokenizeLine = (line, language = 'javascript') => {
     // Por cada patrón, dividimos los segmentos que aún son 'plain'
     patterns.forEach(({ regex, className }) => {
         let newSegments = [];
-        
+
         segments.forEach(segment => {
             // Si ya tiene tipo (no es 'plain'), no lo tocamos
             if (segment.type !== 'plain') {
@@ -45,7 +81,7 @@ export const tokenizeLine = (line, language = 'javascript') => {
             // Aplicamos el regex
             let lastIndex = 0;
             let match;
-            
+
             while ((match = regex.exec(segment.text)) !== null) {
                 // Texto antes del match
                 if (match.index > lastIndex) {
@@ -54,16 +90,16 @@ export const tokenizeLine = (line, language = 'javascript') => {
                         type: 'plain'
                     });
                 }
-                
+
                 // El match en sí
                 newSegments.push({
                     text: match[0],
                     type: className
                 });
-                
+
                 lastIndex = match.index + match[0].length;
             }
-            
+
             // Texto después del último match
             if (lastIndex < segment.text.length) {
                 newSegments.push({
@@ -72,7 +108,7 @@ export const tokenizeLine = (line, language = 'javascript') => {
                 });
             }
         });
-        
+
         segments = newSegments;
     });
 

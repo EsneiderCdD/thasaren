@@ -1,15 +1,3 @@
-/* 
-.HelloWorld-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    letter-spacing: -0.05em;
-}
-
-.HelloWorld-text {
-    max-width: 600px;
-    font-size: 1.1rem;
-    color: var(--gray-10);
-} */
 
 
 .code-editor-container {
@@ -41,7 +29,31 @@
     white-space: pre;
     overflow-x: auto;
 }
-
+.token.declarator {
+    color: #569cd6;
+}
+.token.identifier {
+    color: #d218b0db;
+}
+.token.identifier-usage {
+    color: #d218b0db;
+}
+.token.object {
+    color: #78bbdadb;
+}
+.token.method {
+    color: #78bbdadb;
+}
+.token.operator {
+    color: #569cd6;
+}
+.token.delimiters {
+    color: #ddc523db;
+}
+.token.comment{
+    color: #6a9955;
+    font-style: italic;
+}
 .token.keyword {
     color: #569cd6;
 }
@@ -51,7 +63,7 @@
 }
 
 .token.boolean {
-    color: #569cd6;
+    color: #1e5582;
 }
 
 .token.number {

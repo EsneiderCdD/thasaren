@@ -79,7 +79,7 @@ const VariablesAndTypes = () => {
                 <div className={styles.variables_header}>
                     <div className={styles.variables_info}>
 
-                        <h2>Declaración de Variables</h2>
+                        <h2>Variable Declarators</h2>
                         <p>
                             Para persistir un valor en el tiempo de ejecución, se requiere un espacio en memoria. Declarar es la instrucción explícita al motor para reservar dicho espacio.
                         </p>
