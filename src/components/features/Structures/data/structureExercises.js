@@ -4,28 +4,27 @@ export const structureExercises = [
         title: "El Almacén de Datos (Objetos)",
         description: "Tienes un objeto 'producto'. Accede al nombre usando dot notation y al precio usando bracket notation. Imprime ambos en un solo string.",
         code: `const producto = {
-    id: 101,
-    nombre: "Laptop Pro",
-    precio: 2500
-};
-
-// Accede y concatena: "Producto: Laptop Pro - Precio: 2500"`,
-        runway: `const nombre = producto.nombre;
+  id: 1,
+  item: "laptop",
+  precio: 1500
+}
+const nombre = producto.item;
 const precio = producto["precio"];
+console.log(\`Producto: \${ nombre } a un precio de: \${ precio } \`)
+// Producto: laptop a un precio de: 1500 
+`,
+        runway: "usa Don Notation para el nombre y Bracket Notation para el precio. Imprime en un solo string El producto es [nombre] y su precio es [precio]",
 
-console.log(\`Producto: \${nombre} - Precio: \${precio}\`);`
     },
     {
         id: 2,
         title: "Gestión de Fila (Arrays)",
         description: "Tienes una lista de espera: ['Ana', 'Juan']. Llega 'Pedro' al final y 'Maria' se cansa y se va (estaba de primera). Imprime la lista resultante.",
         code: `const fila = ["Ana", "Juan"];
-
-// Pedro llega (al final), Maria (Ana) se va (al inicio)`,
-        runway: `fila.push("Pedro");
-fila.shift();
-
-console.log(fila); // ["Juan", "Pedro"]`
+fila.push("Pedro");
+fila.shift("");
+console.log(fila); // ["Juan", "Pedro"]`,
+        runway: "push y shift."
     },
     {
         id: 3,

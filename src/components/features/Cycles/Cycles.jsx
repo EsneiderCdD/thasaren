@@ -8,96 +8,123 @@ import {
     bucleForIn,
     bucleForOf,
     breakContinue
-} from "../../../data/codes/cycles";
+} from "./data/cycles";
 import styles from "./style/Cycles.module.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Cycles = () => {
+    const [currentCycle, setCurrentCycle] = useState("Anatomia");
     return (
         <section className={styles.cycles}>
             <h2>El Ciclo (Bucles e Iteraciones)</h2>
             <p>
-                La capacidad de <strong>repetir</strong> una instrucción es la base de la automatización.
-                Los bucles nos permiten ejecutar un bloque de código múltiples veces, ya sea un número fijo o mientras se cumpla una condición.
+                La automatización en el código nace de la capacidad de <strong>repetir</strong> instrucciones.
+                Un bucle es un fragmento de lógica que se ejecuta una y otra vez hasta que una condición decide que es momento de parar.
             </p>
 
-            <div className={styles.block}>
-                <h3>Definición Básica</h3>
-                <p>
-                    Un bucle consta de una <strong>condición</strong> y un <strong>cuerpo</strong>.
-                    Si la condición es verdadera, el cuerpo se ejecuta. Esto se repite hasta que la condición sea falsa.
+            <div className={styles.buttons}>
+                <button onClick={() => setCurrentCycle("Anatomia")}>Anatomia</button>
+                <button onClick={() => setCurrentCycle("ConditionalLoops")}>Bucles Condicionales</button>
+                <button onClick={() => setCurrentCycle("DefiniteLoops")}>Bucles Definidos</button>
+                <button onClick={() => setCurrentCycle("SmartIteration")}>Iteración Inteligente</button>
+                <button onClick={() => setCurrentCycle("BreakContinue")}>Break y Continue</button>
+            </div>
+
+
+
+
+            {currentCycle === "Anatomia" && (
+                <div className={styles.block}>
+                    <h3>1. La Anatomía del Motor</h3>
+                    <p>
+                    Para evitar un "bucle infinito" que bloquee el sistema, todo ciclo necesita tres piezas fundamentales que actúan como su motor:
                 </p>
+                <ul>
+                    <li><strong>Inicio:</strong> El estado inicial o combustible (ej. <code>let i = 0</code>).</li>
+                    <li><strong>Condición:</strong> El rumbo. Mientras sea <code>true</code>, el motor sigue encendido.</li>
+                    <li><strong>Actualización:</strong> El freno gradual. Cambia el estado en cada vuelta para acercarnos al final (ej. <code>i++</code>).</li>
+                </ul>
                 <ViewCode code={definicionBucle} />
             </div>
+            )}
 
-            <h3>Bucles Condicionales (Indeterminados)</h3>
-            <p>
-                Se usan cuando <strong>no sabemos cuántas veces</strong> vamos a repetir algo, sino que dependemos de que algo ocurra (o deje de ocurrir).
-            </p>
 
-            <div className={styles.block}>
-                <h4>While (Mientras)</h4>
+            {currentCycle === "ConditionalLoops" && (
+                <div className={styles.block}>
+                    <h3>2. Bucles Condicionales: Cuando el final es incierto</h3>
+                    <p>
+                        Usamos la familia <code>While</code> cuando no sabemos exactamente cuántas vueltas daremos, sino que dependemos de que algo externo cambie.
+                </p>
+
+                <h4>While (Evaluar antes de actuar)</h4>
                 <p>
-                    Evalúa la condición <strong>antes</strong> de entrar. Si es falsa de inicio, nunca se ejecuta.
+                    Es el bucle precavido. Primero pregunta si la condición se cumple; si no es así, ni siquiera entra a ejecutar el código.
                 </p>
                 <ViewCode code={bucleWhile} />
-            </div>
 
-            <div className={styles.block}>
-                <h4>Do...While (Hacer... Mientras)</h4>
+                <h4>Do...While (Actuar antes de evaluar)</h4>
                 <p>
-                    Garantiza que el código se ejecute <strong>al menos una vez</strong>, porque evalúa la condición al final.
+                    Es el bucle decidido. Ejecuta el código <strong>al menos una vez</strong> y solo después de la primera vuelta pregunta si debe continuar.
                 </p>
                 <ViewCode code={bucleDoWhile} />
             </div>
+            )}
 
-            <h3>Bucles de Conteo (Determinados)</h3>
-            <p>
-                Se usan cuando sabemos (o podemos calcular) el número exacto de repeticiones. Ideal para recorrer listas o contar.
-            </p>
-
-            <div className={styles.block}>
-                <h4>For (Clásico)</h4>
-                <p>
-                    El estándar en casi todos los lenguajes. Tienes control total sobre el índice: dónde empieza, dónde termina y cómo avanza.
+            {currentCycle === "DefiniteLoops" && (
+                <div className={styles.block}>
+                    <h3>3. Bucles de Conteo: El mapa definido</h3>
+                    <p>
+                        Cuando sí sabemos cuántas veces queremos repetir (o podemos calcularlo fácilmente), el <code>for</code> clásico es la herramienta de precisión. Centraliza el inicio, la condición y la actualización en una sola línea, reduciendo el error humano.
                 </p>
                 <ViewCode code={bucleFor} />
             </div>
+            )}
 
-            <h3>Iteración de Estructuras</h3>
-            <p>
-                JavaScript moderno ofrece formas especializadas para recorrer Objetos y Arrays sin lidiar con índices manuales.
-            </p>
+            {currentCycle === "SmartIteration" && (
+                <div className={styles.block}>
+                    <h3>4. Iteración Inteligente: Cruce con Objetos y Arrays</h3>
+                    <p>
+                    Con las estructuras de datos (Objetos y Arreglos) que vimos anteriormente, JavaScript ofrece "llaves maestras" especializadas que recorren el contenido de forma semántica, sin necesidad de índices manuales.
+                </p>
 
-            <div className={styles.block}>
-                <h4>For...in (Para Objetos)</h4>
+                <h4>For...in (Especialista en Objetos)</h4>
                 <p>
-                    Diseñado para iterar sobre las <strong>claves</strong> (propiedades) de un objeto.
+                    Diseñado específicamente para viajar a través de las <strong>propiedades (claves)</strong> de un objeto.
                 </p>
                 <ViewCode code={bucleForIn} />
-            </div>
 
-            <div className={styles.block}>
-                <h4>For...of (Para Colecciones)</h4>
+                <h4>For...of (Especialista en Colecciones)</h4>
                 <p>
-                    Diseñado para iterar sobre los <strong>valores</strong> de elementos iterables (como Arrays o Strings). Es más limpio que el <code>for</code> clásico.
+                    La forma más limpia de obtener los <strong>valores</strong> de una lista (Array) o incluso caracteres de un texto (String).
                 </p>
                 <ViewCode code={bucleForOf} />
             </div>
+            )}
 
-            <div className={styles.block}>
-                <h3>Control de Flujo (Break / Continue)</h3>
-                <p>
-                    A veces necesitamos alterar el ciclo manualmente.
+            {currentCycle === "BreakContinue" && (
+                <div className={styles.block}>
+                    <h3>5. El Freno de Emergencia y el Salto</h3>
+                    <p>
+                    Incluso dentro de la repetición, necesitamos controlar excepciones. Estas palabras clave permiten alterar el flujo natural del ciclo en tiempo de ejecución:
                 </p>
                 <ul>
-                    <li><strong>Continue:</strong> "Salta" la vuelta actual y pasa a la siguiente.</li>
-                    <li><strong>Break:</strong> "Rompe" el bucle por completo y sale de él.</li>
+                    <li><strong>Continue:</strong> "Ignora esta vuelta específica y salta inmediatamente a la siguiente".</li>
+                    <li><strong>Break:</strong> "Abandona el bucle por completo ahora mismo".</li>
                 </ul>
                 <ViewCode code={breakContinue} />
+            </div>
+            )}
+            <div>
+                <Link to="cycles/exercises/1">
+                <button>Ejercicios</button>
+                </Link>
+
             </div>
 
         </section>
     );
 };
+
 
 export default Cycles;

@@ -3,60 +3,68 @@ export const logicExercises = [
         id: 1,
         title: "Control de Acceso (Tipado)",
         description: "Un Usuario para acceder tiene que tener exactamente 18 o mas años y revisar que el numero no sea un string. Ademas requiere estar registrado o tener una invitacion especial. Imprime por consola si se puede acceder o no.",
-        code: `const edad = "20";
-const estaRegistrado = true;
-const tieneInvitacion = false;
+        code: `const edad = "18";
+const registrado = false;
+const invitacionEspecial = true;
 
-// Determina si puede acceder (debe ser número, mayor de 18 y cumplir condición de registro/invitación)`,
-        runway: `const esAdulto = typeof edad === 'number' && edad >= 18;
-const puedeAcceder = esAdulto && (estaRegistrado || tieneInvitacion);
+const revisarEdad = (typeof edad === "number" && edad >= 18 );
+const tieneAcesso = revisarEdad && ( registrado || invitacionEspecial) 
+
+console.log(tieneAcesso); //false`,
+        runway: `usa typeof y condicionales;
 
 console.log(puedeAcceder); // false (edad es string)`
     },
     {
         id: 2,
         title: "Calculadora de Descuentos",
-        description: "Un cliente compra un producto de 150 unidades. Si compra más de 10 unidades aplica un 10% de descuento. Si es cliente 'Premium' aplica un 20%. El descuento no es acumulable (gana el mayor). Imprime el precio final.",
-        code: `const precioBase = 150;
-const cantidad = 12;
-const esPremium = false;
+        description: "Un cliente compra un producto de 150 pesos. Si compra más de 10 unidades aplica un 10% de descuento. Si es cliente 'Premium' aplica un 20%. El descuento no es acumulable (gana el mayor). Imprime el precio final.",
+        code: ` const precioBase = 150;
+ const cantidad = 12;
+ const esPremium = false;
+ let descuento = 0
 
-// Calcula el precio final aplicando el descuento correspondiente`,
-        runway: `let descuento = 0;
-if (esPremium) {
-    descuento = 0.20;
-} else if (cantidad > 10) {
-    descuento = 0.10;
-}
+ if(esPremium){
+  descuento = 0.2
+ } else if (cantidad >= 10 ){
+  descuento = 0.1
+ };
 
 const total = (precioBase * cantidad) * (1 - descuento);
-console.log(total); // 1620`
+console.log(total); //1620`,
+        runway: ""
     },
     {
         id: 3,
         title: "Semáforo de Operaciones",
         description: "Recibes una variable 'accion' con valores: 'CREAR', 'EDITAR' o 'ELIMINAR'. Usa un switch para imprimir: 'Guardando...' para crear, 'Actualizando...' para editar y 'Borrando...' para eliminar. Cualquier otro valor imprime 'Acción no permitida'.",
-        code: `const accion = "EDITAR";
-
-// Implementa la lógica de respuesta según la acción`,
-        runway: `switch (accion) {
-    case 'CREAR': console.log("Guardando..."); break;
-    case 'EDITAR': console.log("Actualizando..."); break;
-    case 'ELIMINAR': console.log("Borrando..."); break;
-    default: console.log("Acción no permitida");
-}`
+        code: ` const accion = "ELIMINAR";
+  
+ switch (accion) {
+  case "EDITAR":
+    console.log("Guardando...");
+    break;
+  case "ELIMINAR": 
+    console.log("Borrando...");
+    break;
+  case "CREAR":
+    console.log("Actualizando...")
+    break;
+  default:
+    console.log("Accion no encontrada.")
+ } `,
+        runway: "usa switch"
     },
     {
         id: 4,
         title: "Validador de Rango y Paridad",
         description: "Verifica si un número está dentro del rango de 10 a 50 (inclusive) y si además es un número par. Imprime true solo si se cumplen ambas condiciones.",
-        code: `const numero = 24;
+        code: `const numero = 23
 
-// Comprueba rango [10-50] y que sea par`,
-        runway: `const enRango = numero >= 10 && numero <= 50;
-const esPar = numero % 2 === 0;
-
-console.log(enRango && esPar); // true`
+const esNumero = numero >= 10 && numero <= 50;
+const esPar= numero % 2 === 0;
+console.log(esNumero && esPar); // false`,
+        runway: "% 2 === 0 es para saber si es par."
     },
     {
         id: 5,
