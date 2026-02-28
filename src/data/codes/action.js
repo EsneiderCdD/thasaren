@@ -54,3 +54,38 @@ export default function principal() { ... }
 
 // archivo: main.js
 import principal, { sumar } from './utils.js';`;
+
+export const ejemploHoistingOk = `// ✅ SUCEDE (Elevación)
+console.log(despedir("Esneider")); 
+
+function despedir(nombre) {
+    return "Adiós, " + nombre;
+}`;
+
+export const ejemploHoistingError = `// ❌ FALLA (Referencia)
+console.log(gritar("Hola")); 
+
+const gritar = (texto) => {
+    return texto.toUpperCase() + "!!!";
+};`;
+
+export const ejemploRest = `function sumarTodo(...numeros) {
+    // numeros es un array con todos los argumentos
+    return numeros.reduce((acc, n) => acc + n, 0);
+}
+
+console.log(sumarTodo(1, 2, 3, 4)); // 10`;
+
+export const ejemploSpread = `const notas = [5, 8, 10];
+const notaMaxima = Math.max(...notas); 
+
+console.log(notaMaxima); // 10`;
+
+export const ejemploCallback = `function procesar(nombre, callback) {
+    const saludo = "Hola " + nombre;
+    callback(saludo);
+}
+
+procesar("Esneider", (res) => {
+    console.log(res.toUpperCase());
+});`;

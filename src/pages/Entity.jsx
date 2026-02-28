@@ -6,43 +6,26 @@ const EntityPage = () => {
         <div className="container" style={{ padding: '2rem 1rem' }}>
             <h1>La Entidad: Objetos</h1>
 
-            <p>Un objeto es una estructura de datos fundamental que almacena colecciones de pares clave-valor. Representa entidades complejas agrupando datos y funcionalidades relacionadas.</p>
+            <p>Si las funciones son las acciones, los objetos son los "sustantivos" de JavaScript. Un objeto es una estructura fundamental que agrupa datos y funcionalidades relacionadas en colecciones de pares clave-valor, permitiéndonos modelar entidades complejas del mundo real.</p>
 
             <section style={{ marginTop: '3rem' }}>
                 <h2>Literal de Objeto</h2>
                 <ViewCode code={ejemploObjeto} />
-                <p>La sintaxis literal <code>&#123; &#125;</code> es la forma más común de crear objetos. Las claves (propiedades) son cadenas o símbolos únicos; los valores pueden ser de cualquier tipo.</p>
+                <p>La forma más directa de crear una entidad es mediante el literal <code>&#123; &#125;</code>. Aquí, definimos propiedades que describen al objeto, donde cada clave es un identificador único que apunta a un valor específico.</p>
             </section>
 
             <section style={{ marginTop: '3rem' }}>
                 <h2>Mecanismos de Acceso</h2>
                 <ViewCode code={ejemploAcceso} />
-                <p>Existen dos sintaxis para acceder a las propiedades:</p>
-                <ul style={{ listStyleType: 'none', padding: 0 }}>
-                    <li><strong>Notación de punto (<code>.</code>)</strong>: Requiere que la clave sea un identificador válido y conocido en tiempo de escritura. Concisa y preferida.</li>
-                    <li><strong>Notación de corchetes (<code>[]</code>)</strong>: Permite el uso de expresiones y strings arbitrarios como claves. Esencial para acceso dinámico.</li>
-                </ul>
+                <p>Una vez creada la entidad, necesitamos interactuar con sus datos. JavaScript nos ofrece dos caminos: la <strong>notación de punto</strong> para un acceso rápido y limpio, y la <strong>notación de corchetes</strong> para cuando necesitamos dinamismo o usar variables para encontrar una clave.</p>
             </section>
 
-            {/* 
-            <section style={{ marginTop: '3rem' }}>
-                <h2>Referencia y Mutabilidad</h2>
-                <ViewCode code={ejemploReferencia} />
-                <p>Las variables que contienen objetos no almacenan el objeto en sí, sino una referencia a su ubicación en memoria. La asignación copia la referencia, no el valor.</p>
-                <p>Modificar el objeto a través de una referencia refleja el cambio en todas las demás referencias al mismo.</p>
-            </section>
+            {/* ... sections about reference and destructuring could go here ... */}
 
             <section style={{ marginTop: '3rem' }}>
-                <h2>Desestructuración</h2>
-                <ViewCode code={ejemploDesestructuracion} />
-                <p>Sintaxis que permite extraer valores de objetos y asignarlos a variables con el mismo nombre de la clave. Estandariza el acceso a propiedades y mejora la legibilidad del código moderno.</p>
-            </section> 
-            */}
-
-            <section style={{ marginTop: '3rem' }}>
-                <h2>Manipulación Básica</h2>
+                <h2>Manipulación y Mutabilidad</h2>
                 <ViewCode code={ejemploManipulacionObjeto} />
-                <p>Los objetos son mutables por defecto. Se pueden agregar nuevas propiedades asignando un valor a una clave inexistente, modificar valores existentes, o eliminar propiedades completamente usando el operador <code>delete</code>.</p>
+                <p>Nuestras entidades rara vez son estáticas. Los objetos son mutables por naturaleza, lo que nos permite evolucionar su estructura en tiempo de ejecución: agregando nuevas características, actualizando valores existentes o eliminando lo que ya no es necesario mediante <code>delete</code>.</p>
             </section>
         </div>
     );
