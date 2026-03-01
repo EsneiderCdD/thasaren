@@ -11,7 +11,7 @@ const ConditionalsPage = () => {
             <Conditionals />
 
             {/*Exercises */}
-            <Link to="/logic/exercises/2">
+            <Link to="/conditionals/exercises/1">
                 <button>Ejercicios</button>
             </Link>
         </div>
