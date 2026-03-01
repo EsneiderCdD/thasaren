@@ -18,7 +18,7 @@ function LogicExercises({ }) {
     return (
         <div className={styles.container}>
             <h1>
-                Ejercicios de Logica
+                Ejercicios variables y tipos
             </h1>
             <h2>{currentExercise.title}</h2>
             <h3>{currentExercise.description}</h3>
