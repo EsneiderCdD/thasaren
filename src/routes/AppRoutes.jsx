@@ -20,6 +20,7 @@ import ClassPage from '../pages/Class';
 import Memory from '../pages/Memory';
 import StateToggle from '../pages/StateToggle';
 import LogicExercises from '../components/features/Logic/Exercises/LogicExercises';
+import OperatorExercises from '../components/features/Operators/Exercises/OperatorExercises';
 import ConditionalExercises from '../components/features/Logic/Exercises/ConditionalExercises';
 import StructureExercises from '../components/features/Structures/Exercises/StructureExercises';
 import CycleExercises from '../components/features/Cycles/Exercises/CyclesExercises';
@@ -36,6 +37,7 @@ const AppRoutes = () => {
 
                 { path: 'variables-and-types', element: <VariablesAndTypesPage /> },
                 { path: 'operators', element: <OperatorsPage /> },
+                { path: 'operators/exercises/:id', element: <OperatorExercises /> },
                 { path: 'conditionals', element: <ConditionalsPage /> },
                 { path: 'conditionals/exercises/:id', element: <ConditionalExercises /> },
                 { path: 'logic/exercises/:id', element: <LogicExercises /> },

@@ -1,4 +1,9 @@
-let coercionResta = false - 5;
+export const operatorExercises = [
+    {
+        id: 1,
+        title: "Comprensión y Flujo de Operadores",
+        description: "",
+        code: `let coercionResta = false - 5;
 console.log(coercionResta, typeof coercionResta); 
 // -5 number, 0 es Falsy
 
@@ -24,4 +29,7 @@ console.log(negacionLogica);
 
 let desafioFinal = (5 === "5" || 10 > 5) && !false && 10 % 2 === 0;
 console.log(desafioFinal); 
-// true, () agrupan y fuerzan el orden
+// true, () agrupan y fuerzan el orden`,
+        runway: ""
+    }
+];

@@ -1,5 +1,5 @@
 import React from 'react';
-import Operators from '../components/features/Logic/Operators';
+import Operators from '../components/features/Operators/Operators';
 import { Link } from 'react-router-dom';
 
 const OperatorsPage = () => {
@@ -11,7 +11,7 @@ const OperatorsPage = () => {
             <Operators />
 
             {/*Exercises */}
-            <Link to="/logic/exercises/4">
+            <Link to="/operators/exercises/1">
                 <button>Ejercicios</button>
             </Link>
         </div>
