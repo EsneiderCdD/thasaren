@@ -4,35 +4,33 @@ export const logicExercises = [
         title: "Exploración de Variables y Tipos",
         description: "",
         code: `var nombre = "Javascript";
+
 let version = 2024;
 let promedioExacto = 6.5;
-let granNumero = 9007199254740991n; 
-// BigInt se define con una 'n' al final
-console.log(typeof granNumero); 
-// "bigint"
-
+let granNumero = 9007199254740991n;
+console.log(typeof granNumero);
+// "bigint"se define con una 'n' al final
 let noEsUnNumero = "Texto" / 2;
-console.log(noEsUnNumero); 
-// NaN
-console.log(typeof noEsUnNumero);
-// "number"
+console.log(noEsUnNumero, typeof noEsUnNumero); // NaN number
 
 const esGenial = true;
+
 impliedGlobal = "No necesito ser declarada"
 //impliedGlobal is not defined
 
 let usuario;
-console.log(usuario);
-// undefined
-
+console.log(usuario); // undefined
 let variable = null;
-console.log(variable);
-// null
+console.log(variable); // null
 
 var - = "Javascript";
-//palabras reservadas no sirven para declarar 
 console.log(-);
-// Expected identifier but found "-"`,
+// Expected identifier but found "-"
+
+let miSuma = function (a, b) {
+    return a + b;
+};
+console.log(miSuma(5, 10));`,
         runway: ""
     }
 ];

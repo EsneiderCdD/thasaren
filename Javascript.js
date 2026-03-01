@@ -1,27 +1,28 @@
-let coercionResta = false - 5;
-console.log(coercionResta, typeof coercionResta); 
-// -5 number, 0 es Falsy
+var nombre = "Javascript";
 
-let coercionSuma = true + 5;
-console.log(coercionSuma, typeof coercionSuma); 
-// 6 number, todo numero diferente de 0 es truthy
+let version = 2024;
+let promedioExacto = 6.5;
+let granNumero = 9007199254740991n;
+console.log(typeof granNumero);
+// "bigint"se define con una 'n' al final
+let noEsUnNumero = "Texto" / 2;
+console.log(noEsUnNumero, typeof noEsUnNumero); // NaN number
 
-let truthyCheck = !5;
-console.log(truthyCheck, typeof truthyCheck); 
-// false boolean
+const esGenial = true;
 
-let precedenciaLogica = true || false && false;
-console.log(precedenciaLogica); 
-// true, primero se resuelve && luego ||
+impliedGlobal = "No necesito ser declarada"
+//impliedGlobal is not defined
 
-let aritmeticaVsComparacion = 10 + 5 === 20 - 5 && 5 * 2 < 20;
-console.log(aritmeticaVsComparacion); 
-// true, Aritmética -> Comparación -> Lógica
+let usuario;
+console.log(usuario); // undefined
+let variable = null;
+console.log(variable); // null
 
-let negacionLogica = !true || "JS" === "JS";
-console.log(negacionLogica); 
-// true, ! solo afecta al valor inmediato
+var - = "Javascript";
+console.log(-);
+// Expected identifier but found "-"
 
-let desafioFinal = (5 === "5" || 10 > 5) && !false && 10 % 2 === 0;
-console.log(desafioFinal); 
-// true, () agrupan y fuerzan el orden
+let miSuma = function (a, b) {
+    return a + b;
+};
+console.log(miSuma(5, 10));

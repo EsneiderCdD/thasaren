@@ -1,35 +1,32 @@
 export const operatorExercises = [
     {
         id: 1,
-        title: "Comprensión y Flujo de Operadores",
-        description: "",
-        code: `let coercionResta = false - 5;
-console.log(coercionResta, typeof coercionResta); 
-// -5 number, 0 es Falsy
+        title: "Jerarquía de Operaciones (PEMDAS)",
+        description: "El orden en que escribes las operaciones determina el resultado. JavaScript siempre resuelve primero paréntesis, luego potencias, después multiplicación/división y finalmente suma/resta.",
+        code: `let operacionCompleja = (10 + 5) * 2 ** 3 / (4 - 2);
+// 1. Paréntesis: (15) * 2 ** 3 / (2)
+// 2. Exponentes: 15 * 8 / 2
+// 3. Mult/Div: 60
 
-let coercionSuma = true + 5;
-console.log(coercionSuma, typeof coercionSuma); 
-// 6 number, todo numero diferente de 0 es truthy
+console.log(operacionCompleja); // 60`,
+        runway: "Recuerda: Paréntesis > Potencias > Multiplicación/División > Suma/Resta."
+    },
+    {
+        id: 2,
+        title: "El Objeto Math",
+        description: "Math es una herramienta nativa para operaciones que van más allá de lo básico, como raíces, redondeos y trigonometría.",
+        code: `let radio = 5;
+let areaCirculo = Math.PI * Math.pow(radio, 2); 
+console.log(areaCirculo); // 78.5398...
 
-let truthyCheck = !5;
-console.log(truthyCheck, typeof truthyCheck); 
-// false boolean
+// Redondeos
+console.log(Math.round(areaCirculo)); // 79
+console.log(Math.floor(areaCirculo)); // 78
+console.log(Math.ceil(areaCirculo));  // 79
 
-let precedenciaLogica = true || false && false;
-console.log(precedenciaLogica); 
-// true, primero se resuelve && luego ||
-
-let aritmeticaVsComparacion = 10 + 5 === 20 - 5 && 5 * 2 < 20;
-console.log(aritmeticaVsComparacion); 
-// true, Aritmética -> Comparación -> Lógica
-
-let negacionLogica = !true || "JS" === "JS";
-console.log(negacionLogica); 
-// true, ! solo afecta al valor inmediato
-
-let desafioFinal = (5 === "5" || 10 > 5) && !false && 10 % 2 === 0;
-console.log(desafioFinal); 
-// true, () agrupan y fuerzan el orden`,
-        runway: ""
+// Funciones útiles
+console.log(Math.sqrt(144)); // 12 (Raíz)
+console.log(Math.abs(-50));  // 50 (Absoluto)`,
+        runway: "Usa Math.round para el más cercano, floor para abajo y ceil para arriba."
     }
 ];
