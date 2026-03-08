@@ -1,4 +1,4 @@
-const miColeccion = ["string", 123, true, null, undefined, [1, 2, 3], [
+export const arraysLessonCode = `const miColeccion = ["string", 123, true, null, undefined, [1, 2, 3], [
     { numero: 1, texto: "lista con objeto(1)", boolean: true },
     { numero: 2, texto: "lista con objeto(2)", boolean: true }
 ],
@@ -94,7 +94,4 @@ const busquedaGlobal = miColeccion.find(function (item) {
     }
     return false;
 });
-console.log("Busqueda Global: ", busquedaGlobal[1].tema[1].clase);
-
-
-
+console.log("Busqueda Global: ", busquedaGlobal[1].tema[1].clase);`;

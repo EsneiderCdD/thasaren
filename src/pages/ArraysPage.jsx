@@ -9,6 +9,9 @@ const ArraysPage = () => {
             <h1>Arreglos (Arrays)</h1>
 
             <Arrays />
+            <Link to="/arrays/exercises">
+                <button>Ejercicios</button>
+            </Link>
         </div>
     );
 };

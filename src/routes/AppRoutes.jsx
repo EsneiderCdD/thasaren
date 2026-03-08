@@ -10,6 +10,7 @@ import OperatorsPage from '../pages/OperatorsPage';
 import ConditionalsPage from '../pages/ConditionalsPage';
 import ObjectsPage from '../pages/ObjectsPage';
 import ArraysPage from '../pages/ArraysPage';
+import ArraysExercisesPage from '../pages/ArraysExercisesPage';
 import RouterPage from '../pages/Router';
 import Cycle from '../pages/Cycle';
 import Action from '../pages/Action';
@@ -43,6 +44,7 @@ const AppRoutes = () => {
                 { path: 'logic/exercises/:id', element: <LogicExercises /> },
                 { path: 'objects', element: <ObjectsPage /> },
                 { path: 'arrays', element: <ArraysPage /> },
+                { path: 'arrays/exercises', element: <ArraysExercisesPage /> },
                 { path: 'structures/exercises/:id', element: <StructureExercises /> },
                 { path: 'cycle', element: <Cycle /> },
                 { path: 'cycle/exercise/:id', element: <CycleExercises /> },
