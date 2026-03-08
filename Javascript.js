@@ -1,28 +1,16 @@
-var nombre = "Javascript";
+const miColeccion = ["string", 123, true, null, undefined, {nombre:"juan"}, [1,2,3]];
+const saludar = function() { return "hola"};
 
-let version = 2024;
-let promedioExacto = 6.5;
-let granNumero = 9007199254740991n;
-console.log(typeof granNumero);
-// "bigint"se define con una 'n' al final
-let noEsUnNumero = "Texto" / 2;
-console.log(noEsUnNumero, typeof noEsUnNumero); // NaN number
+miColeccion.push({id: 99, status: "nuevo"});
+miColeccion.pop();
+miColeccion.push(function miformula(valor){
+    return valor;
+});
 
-const esGenial = true;
+console.log(miColeccion[7]("Magia"));
+console.log(miColeccion.length);
 
-impliedGlobal = "No necesito ser declarada"
-//impliedGlobal is not defined
+miColeccion.unshift("Hello World");
+console.log(miColeccion);
 
-let usuario;
-console.log(usuario); // undefined
-let variable = null;
-console.log(variable); // null
-
-var - = "Javascript";
-console.log(-);
-// Expected identifier but found "-"
-
-let miSuma = function (a, b) {
-    return a + b;
-};
-console.log(miSuma(5, 10));
+miColeccion

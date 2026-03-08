@@ -8,6 +8,14 @@ function NavbarGrid() {
             <Link to="/variables-and-types">
                 <Square title="Variables & Types" type="square" />
             </Link>
+            <Link to="/arrays">
+                <Square title="Arrays" type="rectangle" />
+            </Link>
+
+            <Link to="/objects">
+                <Square title="Objects" type="square" />
+            </Link>
+
             <Link to="/operators">
                 <Square title="Operators" type="rectangle" />
             </Link>
@@ -15,12 +23,6 @@ function NavbarGrid() {
                 <Square title="Conditionals" type="square" />
             </Link>
 
-            <Link to="/objects">
-                <Square title="Objects" type="rectangle" />
-            </Link>
-            <Link to="/arrays">
-                <Square title="Arrays" type="square" />
-            </Link>
 
             <Link to="/cycle">
                 <Square title="Cycle" type="square" />
