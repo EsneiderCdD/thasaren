@@ -1,16 +1,12 @@
-
 import { useRoutes } from 'react-router-dom';
 import Layout from '../components/reusables/Layout/Layout';
 import Home from '../pages/Home';
-
 import ViewCodePage from '../pages/ViewCodePage';
-
 import VariablesAndTypesPage from '../pages/VariablesAndTypesPage';
 import OperatorsPage from '../pages/OperatorsPage';
 import ConditionalsPage from '../pages/ConditionalsPage';
 import ObjectsPage from '../pages/ObjectsPage';
 import ArraysPage from '../pages/ArraysPage';
-import ArraysExercisesPage from '../pages/ArraysExercisesPage';
 import RouterPage from '../pages/Router';
 import Cycle from '../pages/Cycle';
 import Action from '../pages/Action';
@@ -33,9 +29,7 @@ const AppRoutes = () => {
             element: <Layout />,
             children: [
                 { index: true, element: <Home /> },
-
                 { path: 'idecss', element: <ViewCodePage /> },
-
                 { path: 'variables-and-types', element: <VariablesAndTypesPage /> },
                 { path: 'operators', element: <OperatorsPage /> },
                 { path: 'operators/exercises/:id', element: <OperatorExercises /> },
@@ -44,7 +38,7 @@ const AppRoutes = () => {
                 { path: 'logic/exercises/:id', element: <LogicExercises /> },
                 { path: 'objects', element: <ObjectsPage /> },
                 { path: 'arrays', element: <ArraysPage /> },
-                { path: 'arrays/exercises', element: <ArraysExercisesPage /> },
+                { path: 'arrays/:id', element: <StructureExercises /> },
                 { path: 'structures/exercises/:id', element: <StructureExercises /> },
                 { path: 'cycle', element: <Cycle /> },
                 { path: 'cycle/exercise/:id', element: <CycleExercises /> },

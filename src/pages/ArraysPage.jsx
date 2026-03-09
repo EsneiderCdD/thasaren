@@ -9,7 +9,7 @@ const ArraysPage = () => {
             <h1>Arreglos (Arrays)</h1>
 
             <Arrays />
-            <Link to="/arrays/exercises">
+            <Link to="/arrays/1">
                 <button>Ejercicios</button>
             </Link>
         </div>

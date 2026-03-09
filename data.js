@@ -14,13 +14,3 @@ const curso = {
         idioma: "es"
     }
 };
-//Dot Notation
-const nombreProfe = curso.instructor.nombre;
-const añosExp = curso.instructor.experiencia;
-console.log(nombreProfe, añosExp);
-//Bracket Notation
-const tieneAcceso = curso.configuracion["acceso-total"];
-console.log(tieneAcceso);
-//object + lista
-const segundaRedSocial = curso.instructor.redes[1];
-console.log(segundaRedSocial);

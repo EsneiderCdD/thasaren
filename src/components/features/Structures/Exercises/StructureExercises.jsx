@@ -29,12 +29,12 @@ function StructureExercises({ }) {
 
             <div>
                 {prevId > 0 &&
-                    <Link to={`/structures/exercises/${prevId}`}>
+                    <Link to={`/arrays/${prevId}`}>
                         <button>Previous</button>
                     </Link>
                 }
                 {nextId <= structureExercises.length && (
-                    <Link to={`/structures/exercises/${nextId}`}>
+                    <Link to={`/arrays/${nextId}`}>
                         <button>Next</button>
                     </Link>
                 )}

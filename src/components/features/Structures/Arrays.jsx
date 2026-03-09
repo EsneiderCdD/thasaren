@@ -1,4 +1,3 @@
-
 import ViewCode from "../../../components/reusables/ViewCode/ViewCode";
 import {
     declaracionArray,
@@ -13,7 +12,7 @@ import {
     metodoFind,
     destructuringArray,
     spreadArray
-} from "../../../data/codes/structures";
+} from "./data/arrays_lesson";
 import styles from "./style/Structures.module.css";
 import { useState } from "react";
 
@@ -107,7 +106,6 @@ const Arrays = () => {
                     <h3>{arrayStructure[currentPropty].label}</h3>
                     <p>{arrayStructure[currentPropty].description}</p>
 
-                    {/* Botones simples para navegar métodos (como el usuario sugirió) */}
                     <div>
                         {Object.keys(arrayStructure[currentPropty].methods).map(mKey => (
                             <button key={mKey} onClick={() => setMethod(mKey)} style={{ margin: '5px' }}>

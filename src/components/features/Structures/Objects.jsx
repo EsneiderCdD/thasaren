@@ -13,14 +13,12 @@ import {
     destructuringObjeto,
     spreadObjeto,
     herenciaToString
-} from "../../../data/codes/structures";
+} from "./data/objects_lesson";
 import styles from "./style/Structures.module.css";
 import { useState } from "react";
 
 const Objects = () => {
     const [accessType, setAccessType] = useState('dotnotation');
-
-
 
     return (
         <section className={styles.objects}>
@@ -35,15 +33,11 @@ const Objects = () => {
                 </div>
             </div>
 
-
-
-
             <h3>Aceeso Propiedades</h3>
             <div className={styles.access_buttons}>
                 <button onClick={() => setAccessType('dotnotation')}>Dot Notation</button>
                 <button onClick={() => setAccessType('bracketnotation')}>Bracket Notation</button>
             </div>
-
 
             {accessType === 'dotnotation' && (
                 <div>
@@ -70,15 +64,11 @@ const Objects = () => {
                             <ViewCode code={anadirPropiedad} />
                         </div>
                     </div>
-
-
                 </div>
-
             )}
 
             {accessType === 'bracketnotation' && (
                 <div>
-                    {/* 1. situation */}
                     <div className={styles.bracket_situation}>
                         <div className={styles.bracket_situation_text}>
                             <h4>Notación de Corchetes</h4>
@@ -95,7 +85,6 @@ const Objects = () => {
                         </div>
                     </div>
 
-                    {/* 2. error vs solution */}
                     <div className={styles.bracket_comparison}>
                         <div className={styles.bracket_comparison_text}>
                             <p>Si usamos <strong>punto</strong>, JS busca literalmente una propiedad llamada "propiedadBuscada".//undefined</p>
@@ -107,7 +96,6 @@ const Objects = () => {
                         </div>
                     </div>
 
-                    {/* 3. add properties */}
                     <div className={styles.bracket_add}>
                         <div className={styles.bracket_add_text}>
                             <h4>Añadir con Corchetes</h4>
@@ -120,7 +108,6 @@ const Objects = () => {
                         </div>
                     </div>
 
-                    {/* 4. spaces */}
                     <div className={styles.bracket_spaces}>
                         <div className={styles.bracket_spaces_text}>
                             <h4>Espacios y Caracteres</h4>
@@ -133,7 +120,6 @@ const Objects = () => {
                         </div>
                     </div>
 
-                    {/* 5. methods */}
                     <div className={styles.methods_intro}>
                         <div className={styles.methods_intro_text}>
                             <h3>Métodos (Acciones)</h3>
@@ -147,7 +133,6 @@ const Objects = () => {
                         </div>
                     </div>
 
-                    {/* 6. prototype */}
                     <div className={styles.methods_prototype}>
                         <div className={styles.methods_prototype_text}>
                             <h3>Herencia (Prototype)</h3>
@@ -162,12 +147,9 @@ const Objects = () => {
                             <ViewCode code={herenciaToString} />
                         </div>
                     </div>
-
                 </div>
             )}
 
-
-            {/* 7. Inmutabilidad */}
             <div className={styles.immutability}>
                 <div className={styles.immutability_code}>
                     <ViewCode code={referenciaObjeto} />
@@ -184,7 +166,6 @@ const Objects = () => {
                 </div>
             </div>
 
-            {/* 8. Destructuring */}
             <div className={styles.destructuring}>
                 <div className={styles.destructuring_code}>
                     <ViewCode code={destructuringObjeto} />
@@ -200,7 +181,6 @@ const Objects = () => {
                 </div>
             </div>
 
-            {/* 9. Spread Operator */}
             <div className={styles.spread}>
                 <div className={styles.spread_code}>
                     <ViewCode code={spreadObjeto} />
@@ -215,7 +195,6 @@ const Objects = () => {
                     </p>
                 </div>
             </div>
-
         </section>
     );
 };
