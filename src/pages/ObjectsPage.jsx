@@ -11,7 +11,7 @@ const ObjectsPage = () => {
             <Objects />
 
             {/*Exercises */}
-            <Link to="/structures/exercises/1">
+            <Link to="/objects/1">
                 <button>Ejercicios</button>
             </Link>
         </div>

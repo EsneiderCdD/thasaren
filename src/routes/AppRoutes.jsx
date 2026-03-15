@@ -21,6 +21,7 @@ import OperatorExercises from '../components/features/Operators/Exercises/Operat
 import ConditionalExercises from '../components/features/Logic/Exercises/ConditionalExercises';
 import StructureExercises from '../components/features/Structures/Exercises/StructureExercises';
 import CycleExercises from '../components/features/Cycles/Exercises/CyclesExercises';
+import ObjectExercises from '../components/features/Structures/Exercises/ObjectExercises';
 
 const AppRoutes = () => {
     const element = useRoutes([
@@ -37,6 +38,7 @@ const AppRoutes = () => {
                 { path: 'conditionals/exercises/:id', element: <ConditionalExercises /> },
                 { path: 'logic/exercises/:id', element: <LogicExercises /> },
                 { path: 'objects', element: <ObjectsPage /> },
+                { path: 'objects/:id', element: <ObjectExercises /> },
                 { path: 'arrays', element: <ArraysPage /> },
                 { path: 'arrays/:id', element: <StructureExercises /> },
                 { path: 'structures/exercises/:id', element: <StructureExercises /> },
