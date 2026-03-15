@@ -1,26 +1,20 @@
-const curso = {
-    titulo: "Master en JavaScript",
-    instructor: {
-        nombre: "Thasaren",
-        experiencia: 10,
-        redes: ["github", "linkedin"]
-    },
-    modulos: [
-        { id: 1, nombre: "Fundamentos", completado: true },
-        { id: 2, nombre: "Objetos y Arrays", completado: false }
-    ],
-    configuracion: {
-        "acceso-total": true,
-        idioma: "es"
-    }
-};
-//Dot Notation
-const nombreProfe = curso.instructor.nombre;
-const añosExp = curso.instructor.experiencia;
-console.log(nombreProfe, añosExp);
-//Bracket Notation
-const tieneAcceso = curso.configuracion["acceso-total"];
-console.log(tieneAcceso);
-//object + lista
-const segundaRedSocial = curso.instructor.redes[1];
-console.log(segundaRedSocial);
+import { tienda } from "./data.js";
+
+const nombreTienda = tienda.nombre;
+const insumos = tienda.insumos;
+const bebidas = insumos.bebidas;
+const bebidasLight = bebidas.light;
+const precioAgua = bebidasLight[1].precio;
+
+const nombrebeBebidasLight = [bebidasLight[0].nombre, bebidasLight[1].nombre, bebidasLight[2].nombre];
+
+const isDisponibleJugoAzucarado = 
+    bebidas.azucaradas[1].isDisponible;
+
+const productoDosLimpieza = 
+    insumos.limpieza.aseo[1];
+
+const alimentosDisponibles ={ arroz: insumos.alimentos[0].isDisponible, frijoles: insumos.alimentos[1].isDisponible };
+ 
+console.log("Hay arroz?",alimentosDisponibles.arroz);
+console.log(`Hay frijoles?${alimentosDisponibles.frijoles}`);

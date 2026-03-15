@@ -25,8 +25,11 @@ function ObjectExercises({ }) {
             <h2>{currentExercise.title}</h2>
             <h3>{currentExercise.description}</h3>
             <p>{currentExercise.runway}</p>
-            <ViewCode code={currentExercise.code} />
-
+            {Array.isArray(currentExercise.code) ? (
+                currentExercise.code.map((c, index) => <ViewCode key={index} code={c} />)
+            ) : (
+                <ViewCode code={currentExercise.code} />
+            )}
             <div className={styles.navigation_buttons}>
                 {prevId > 0 &&
                     <Link to={`/objects/${prevId}`}>
