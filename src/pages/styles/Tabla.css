@@ -1,0 +1,27 @@
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.minimal-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.minimal-table th,
+.minimal-table td {
+    padding: 0.75rem;
+}
+
+.minimal-table thead tr {
+    border-bottom: 2px solid #333;
+}
+
+.minimal-table tbody tr {
+    border-bottom: 1px solid #eee;
+}
