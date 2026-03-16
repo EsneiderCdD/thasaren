@@ -1,0 +1,50 @@
+.rootNode {
+    padding: 6px 12px;
+    background: var(--yellow-sun);
+    color: var(--gray-100);
+    border: 2px solid var(--gray-80);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(255, 214, 10, 0.3);
+    transition: all 0.3s ease;
+}
+
+.rootNode:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 214, 10, 0.4);
+}
+
+
+.revealNode {
+    padding: 10px 20px;
+    background: var(--gray-70);
+    color: var(--gray-10);
+    border: 1px solid var(--gray-40);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.revealIcon {
+    color: var(--gray-40);
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.clickableNode {
+    padding: 8px 16px;
+    background: var(--gray-70);
+    color: var(--gray-20);
+    border: 1px solid var(--gray-20);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.clickableNodeSelected {
+    background: var(--gray-40);
+    color: var(--gray-10);
+    border: 1px solid var(--gray-10);
+}

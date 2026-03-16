@@ -1,6 +1,7 @@
 import { useRoutes } from 'react-router-dom';
 import Layout from '../components/reusables/Layout/Layout';
 import Home from '../pages/Home';
+import HomeFlow from '../pages/HomeFlow';
 import ViewCodePage from '../pages/ViewCodePage';
 import VariablesAndTypesPage from '../pages/VariablesAndTypesPage';
 import OperatorsPage from '../pages/OperatorsPage';
@@ -16,6 +17,7 @@ import Api from '../pages/Api';
 import ClassPage from '../pages/Class';
 import Memory from '../pages/Memory';
 import StateToggle from '../pages/StateToggle';
+import MapPage from '../pages/MapPage';
 import LogicExercises from '../components/features/Logic/Exercises/LogicExercises';
 import OperatorExercises from '../components/features/Operators/Exercises/OperatorExercises';
 import ConditionalExercises from '../components/features/Logic/Exercises/ConditionalExercises';
@@ -30,6 +32,7 @@ const AppRoutes = () => {
             element: <Layout />,
             children: [
                 { index: true, element: <Home /> },
+                { path: 'home', element: <HomeFlow /> },
                 { path: 'idecss', element: <ViewCodePage /> },
                 { path: 'variables-and-types', element: <VariablesAndTypesPage /> },
                 { path: 'operators', element: <OperatorsPage /> },
@@ -52,6 +55,7 @@ const AppRoutes = () => {
                 { path: 'class', element: <ClassPage /> },
                 { path: 'memory', element: <Memory /> },
                 { path: 'state-toggle', element: <StateToggle /> },
+                { path: 'mapa', element: <MapPage /> },
             ],
         },
     ]);
